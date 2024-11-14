@@ -1,22 +1,29 @@
 .body_container {
-    height: 100vh;
+    height: max-content;
     width: 100%;
     background: #06071B;
-    padding-top: 100px;
-    padding-bottom: 10vh;
+    padding-top: 25px;
 }
-.body_titles{
-  width: 25%;  
-  margin: 50px auto;  
+.body_titles_about{
+  width: 43%;  
+  margin: 10px auto;
+  display: flex;
+  align-items: flex-start;
+  gap:30px;  
 }
  h1{
     font-size: 55px;
     color: #fff;
  }
  
+ .img_about {
+   width: 160px;
+  height: 160px;
+ }
  .gradient-title{
     animation: gradiantstitleChange 3s linear infinite; 
     font-size: 55px;
+    margin-top: -20px;
 }
 
 @keyframes gradiantstitleChange {
@@ -33,25 +40,19 @@
     }
   }
 
-
-
-.body_cards{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap:15px
-}
-
-
-.card {
-    background: linear-gradient(180deg, rgba(8, 80, 153, 0.652) 0%, #06071b8a 100%);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    max-width: 300px;
-    animation: shadowns 13s linear infinite; 
-    /* Sombra blanca solo en la parte superior */
+  .container_proyects {
+  width: 43%; 
+  padding-bottom: 10vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;  
   }
+
+
+
+
+
   @keyframes shadowns {
     0% {
         box-shadow: 0px -10px 555px rgba(38, 52, 255, 0.652);
