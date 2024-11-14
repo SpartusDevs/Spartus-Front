@@ -9,6 +9,7 @@ import ProyectsPreview from '../../components/ProyectsPreview/ProyectsPreview';
 import Body from './Body';
 import MenuBar from '../../components/MenuBar/MenuBar';
 import ImageCarousel from '../../components/ImageCarousel';
+import './styles/Header.css'
 
 function Header() {
   const [updateImageLogo, setUpdateImageLogo] = useState(logo);
@@ -34,8 +35,8 @@ function Header() {
         <div className='flex-box box-1'>
           <img src={updateImageLogo} className='img'/>
           <img src={logo2Developer} className='absoluteImg'/>
-          <p style={{ opacity: flag ? 1 : 0.3 }}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore autem aliquam accusamus!</p>
-          <p   style={{ opacity: flag ? 1 : 0.3 }}>Lorem, ipsum.</p>
+          <p style={{ opacity: flag ? 1 : 0.3 }} className='buttonText_landing'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore autem aliquam accusamus!</p>
+          <p   style={{ opacity: flag ? 1 : 0.3 }} className='buttonText_landing'>Lorem, ipsum.</p>
           {/* /about */}
          
        <Button color="danger" variant="solid" className='cvButton'         style={{ opacity: flag ? 1 : 0 }}
@@ -43,7 +44,7 @@ function Header() {
       
         </div>
         <div className='flex-box box-2' data-aos="fade-left"  data-aos-duration="3000">
-          <h1 style={{fontSize:'41px'}}>Ultimos proyectos:</h1>
+          <h1 className="proyect_title-landing" >Ultimos proyectos:</h1>
         <ImageCarousel />
         <ImageCarousel />
         <ImageCarousel />

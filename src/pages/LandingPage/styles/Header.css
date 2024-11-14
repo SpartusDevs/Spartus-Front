@@ -1,0 +1,13 @@
+.proyect_title-landing{
+    font-size: 41px;
+}
+
+@media (max-width:1300px){
+    .proyect_title-landing{
+        font-size: 25px;
+    }
+    .buttonText_landing {
+      padding: 15px;
+      text-align: center;  
+    }
+}
