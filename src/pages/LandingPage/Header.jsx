@@ -31,20 +31,19 @@ function Header() {
       <header className='header'>
        <MenuBar/>
       </header>
-      <main>
-        <div className='flex-box box-1'>
+      <main className='container'>
+        <div className='box box-1'>
           <img src={updateImageLogo} className='img'/>
           <img src={logo2Developer} className='absoluteImg'/>
           <p style={{ opacity: flag ? 1 : 0.3 }} className='buttonText_landing'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore autem aliquam accusamus!</p>
           <p   style={{ opacity: flag ? 1 : 0.3 }} className='buttonText_landing'>Lorem, ipsum.</p>
-          {/* /about */}
          
-       <Button color="danger" variant="solid" className='cvButton'         style={{ opacity: flag ? 1 : 0 }}
+       <Button color="danger" variant="solid" className='box-1-button'         style={{ opacity: flag ? 1 : 0 }}
           >  <Link to="/about">Descubre más  </Link></Button>
       
         </div>
-        <div className='flex-box box-2' data-aos="fade-left"  data-aos-duration="3000">
-          <h1 className="proyect_title-landing" >Ultimos proyectos:</h1>
+        <div className='box box-2' data-aos="fade-left"  data-aos-duration="3000">
+          <h1 className="lastProyects" >Ultimos proyectos:</h1>
         <ImageCarousel />
         <ImageCarousel />
         <ImageCarousel />
