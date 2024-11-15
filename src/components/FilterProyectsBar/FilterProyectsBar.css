@@ -1,0 +1,111 @@
+.leftBar_filterProyects {
+    position: absolute;
+    left: 5vh;
+    width: 40vh;
+    height: max-content;
+    background: linear-gradient(to bottom, rgba(23, 28, 158, 0.6), rgba(23, 28, 158, 0.2)); /* Semi-transparente */
+    border-radius: 15px;
+    backdrop-filter: blur(35px); /* Efecto de desenfoque */
+    -webkit-backdrop-filter: blur(15px); /* Para compatibilidad con Safari */
+    border: 1px solid rgba(16, 7, 181, 0.822); /* Borde tenue para más realismo */
+    padding: 20px;
+   /* box-shadow: 0 4px 30px rgba(204, 111, 5, 0.779); */
+
+}
+
+.title_filterProyects {
+    font-size: 25px;
+    color: white;
+    margin-top: 20px;
+}
+
+.h4_filterProyects{
+margin: 20px 0 5px 0;
+}
+
+
+.inputNombre_filterProyects{
+    height:42px;
+margin: 0px auto;
+}
+.icon_filterProyects{
+    position: static;
+}
+.technology-icons {
+    display: flex;
+    gap:8px;
+    
+}
+
+@media (max-width:1500px) {
+    .leftBar_filterProyects {
+        position: static;
+        width:38%;   
+        margin: auto;
+        background: none;
+    }
+    .title_filterProyects {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+    .h4_filterProyects{
+        font-size: 12px;
+    }
+    
+.inputNombre_filterProyects{
+    height: 30px;
+}
+}
+
+
+@media (max-width:1300px){
+    .leftBar_filterProyects {
+        position: static;
+        width: 72%;
+        margin: 5px auto;
+        padding: 10px;
+        background: none;
+        border-radius: 15px;
+        margin-left: 113px;
+    }
+    .title_filterProyects {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+    .h4_filterProyects{
+        font-size: 12px;
+    }
+    
+.inputNombre_filterProyects{
+    height: 30px;
+}
+}
+
+
+
+
+
+@media (max-width:1100px){
+    .leftBar_filterProyects {
+        position: static;
+        width: 80%;
+        margin: 5px auto;
+        padding: 10px;
+        background: none;
+        border-radius: 15px;
+        backdrop-filter: blur(35px); /* Efecto de desenfoque */
+        -webkit-backdrop-filter: blur(15px); /* Para compatibilidad con Safari */
+        border: 1px solid rgba(16, 7, 181, 0.822); /* Borde tenue para más realismo */
+    }
+    .title_filterProyects {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+    .h4_filterProyects{
+        font-size: 12px;
+    }
+    
+.inputNombre_filterProyects{
+    height: 30px;
+}
+}

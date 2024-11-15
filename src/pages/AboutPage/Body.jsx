@@ -5,6 +5,7 @@ import ProyectsPreview from "../../components/ProyectsPreview/ProyectsPreview"
 import logo2 from '../../assets/logo/1-removebg-preview.png';
 import "./styles/Body.css";
 import { Link } from "react-router-dom";
+import FilterProyectsBar from "../../components/FilterProyectsBar/FilterProyectsBar";
 function Body() {
   return (
     <div className="body_container"> 
@@ -18,6 +19,7 @@ function Body() {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, blanditiis.</p>
       </div></div>
    <menubar/>
+   <FilterProyectsBar/>
    <div className="container_proyects">
         <ProyectsPreview  />
         <ProyectsPreview />
