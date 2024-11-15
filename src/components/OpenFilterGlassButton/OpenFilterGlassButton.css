@@ -1,5 +1,7 @@
 
-  
+  .container_openFilter {
+    position: absolute;
+  }
   .glass-button_openFilter {
     position: relative;
     display: flex ;
@@ -40,5 +42,21 @@
     100% {
         color:  rgba(255,0,0,1);
 
+    }
+  }
+
+
+  @media (max-width:800px) {
+    .container_openFilter {
+      position: static;
+      display: flex;
+      margin-left:10%;
+    }
+ 
+  }
+
+  @media(max-width:580px){
+    .icon_openFilter{
+      font-size: x-large;
     }
   }
