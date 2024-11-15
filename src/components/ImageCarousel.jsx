@@ -1,4 +1,3 @@
-import React from 'react';
 import './ImageCard.css'; // Para el estilo
 
 const ImageCard = () => {

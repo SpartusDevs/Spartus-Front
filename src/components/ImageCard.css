@@ -6,8 +6,9 @@
     background-color: rgba(255, 255, 255, 0.1); /* Rectángulo transparente */
     backdrop-filter: blur(10px); /* Efecto de desenfoque de fondo */
     border-radius: 10px;
-    padding: 12px;
+    padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
   }
 
 
@@ -18,8 +19,8 @@
   
   
   .image-container img {
-    width: 150px;
-    height: 100px;
+    width: 130px;
+    height: 70px;
     object-fit: cover;
     border-radius: 5px;
   }

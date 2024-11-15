@@ -3,7 +3,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    gap:10px
+    gap:20px
   }
   .button_leftBar {
     position: relative;
@@ -30,6 +30,7 @@
   
     .icon_leftBar{
       font-size: x-large;
+      margin-left: 10px;
     }
 
 

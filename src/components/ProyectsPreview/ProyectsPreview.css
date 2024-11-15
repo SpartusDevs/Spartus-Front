@@ -5,7 +5,7 @@
   background-color: rgb(14, 13, 13);
   backdrop-filter: blur(30px); 
   border-radius: 10px;
-  padding: 12px;
+  padding: 10px;
   box-shadow: 0 4px 8px rgba(243, 239, 239, 0.105);
 }
 
@@ -17,8 +17,8 @@
 
 
 .image-container_pr img {
-  width: 150px;
-  height: 100px;
+  width: 130px;
+  height: 70px;
   object-fit: cover;
   border-radius: 5px;
 }

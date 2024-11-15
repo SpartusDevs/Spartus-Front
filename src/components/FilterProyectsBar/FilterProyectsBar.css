@@ -17,7 +17,7 @@
       backdrop-filter: blur(35px);
       -webkit-backdrop-filter: blur(15px);
       border: 1px solid rgba(16, 7, 181, 0.822);
-      padding: 20px;
+      padding: 12px;
       animation: blueShadow 3s ease-out 1; /* Aplicar la animación */
       overflow: hidden;
     }
@@ -30,14 +30,15 @@
 }
 
 .h4_filterProyects{
-margin: 20px 0 5px 0;
+margin: 1rem 0 5px 0;
 font-size: 0.85rem;
 }
 
 
 .inputNombre_filterProyects{
-    height:42px;
-margin: 0px auto;
+    height:1.8rem;
+    margin: 0px auto;
+    
 }
 .icon_filterProyects{
     position: static;
@@ -49,6 +50,7 @@ margin: 0px auto;
 }
 
 .arquiButons_filterProyects{
+    height: 1.8rem;
     display: flex;
     gap:10px
 }

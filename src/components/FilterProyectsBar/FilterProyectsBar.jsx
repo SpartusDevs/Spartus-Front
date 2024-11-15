@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Input, DatePicker, FloatButton, Button } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import './FilterProyectsBar.css';
