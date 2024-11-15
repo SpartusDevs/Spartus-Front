@@ -1,5 +1,9 @@
 .proyect_title-landing{
-    font-size: 41px;
+    font-size: 1.8rem;
+}
+
+.buttonText_landing {
+    font-size: 0.9rem;
 }
 
 @media (max-width:1300px){

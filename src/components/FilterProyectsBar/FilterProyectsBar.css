@@ -24,13 +24,14 @@
   
 
 .title_filterProyects {
-    font-size: 25px;
+    font-size: 1.4rem;
     color: white;
     margin-top: 20px;
 }
 
 .h4_filterProyects{
 margin: 20px 0 5px 0;
+font-size: 0.85rem;
 }
 
 
@@ -51,10 +52,13 @@ margin: 0px auto;
     display: flex;
     gap:10px
 }
-
+.pFunction_filterProyects{
+    font-size: 0.82rem;
+}
 
 @media (max-width:1500px) {
 .pFunction_filterProyects{
+    font-size: 1rem;
     display: none;
 }
     .leftBar_filterProyects {

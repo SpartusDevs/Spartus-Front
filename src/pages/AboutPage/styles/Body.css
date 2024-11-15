@@ -12,8 +12,11 @@
   gap:30px;  
 }
 .title_about{
-    font-size: 55px;
+    font-size: 2rem;
     color: #fff;
+ }
+ .titlesText_about{
+  padding-top: 1rem;
  }
  
  .img_about {
@@ -22,8 +25,11 @@
  }
  .gradient-title_about{
     animation: gradiantstitleChange 3s linear infinite; 
-    font-size: 55px;
-    margin-top: -20px;
+    font-size: 2rem;
+    margin-top: -0.8rem;
+}
+.p_about {
+  font-size: 0.82rem;
 }
 
 @keyframes gradiantstitleChange {

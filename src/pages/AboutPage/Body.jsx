@@ -18,10 +18,10 @@ function Body() {
       <div className="body_titles_about">
         <Link to="/"> 
      <img src={logo2} className='img_about'/></Link>
-     <div>
+     <div className="titlesText_about">
         <h1 className="title_about">Nuestros</h1>
         <h1 className="gradient-title_about">proyectos</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, blanditiis.</p>
+        <p className="p_about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, blanditiis.</p>
       </div></div>
    <menubar/> {!isFilterOpen ? <LeftBar onClose={handleIsFilterOpenChange}/> :
    <FilterProyectsBar onClose={handleIsFilterOpenChange}/> }

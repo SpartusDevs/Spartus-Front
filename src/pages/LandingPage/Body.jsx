@@ -8,7 +8,7 @@ function Body() {
       <div className="body_titles" data-aos="fade-up"
      data-aos-anchor-placement="top-bottom"   data-aos-duration="2000">
         <h1>Acelera tu</h1>
-        <h1>Reconversión</h1>
+        <h1 className="h1_reconversion">Reconversión</h1>
         <h1 className="gradient-title">Reconversión</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, blanditiis.</p>
       </div>

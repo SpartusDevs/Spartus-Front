@@ -9,7 +9,7 @@ function ButtonScrollToTop() {
   return (
     <div className="glass-button" onClick={scrollToTop} data-aos="fade-up"
     data-aos-anchor-placement="center-center" >
-      <FcCollapse size={30} /> 
+      <FcCollapse size={25} /> 
     </div>
   );
 }

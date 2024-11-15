@@ -1,6 +1,9 @@
 
   .container_leftBar {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap:10px
   }
   .button_leftBar {
     position: relative;
