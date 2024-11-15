@@ -1,8 +1,21 @@
-# React + Vite
+# Espartus
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Espartus** is a project currently under development aimed at [brief description of the project’s purpose, e.g., enhancing user experience in task management]. Built using modern and flexible technologies like **Vite** and **Node.js**, it is designed for scalability and efficiency.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Technologies Used
+
+- **Node.js**: v21.7.3  
+- **Vite**: Fast and lightweight frontend development environment.  
+- **npm**: Package manager for dependency management.
+
+---
+
+## ⚙️ Installation and Setup
+
+Follow these steps to clone and install the project locally:
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/JuanLaspiur/Espartus-Frontend.git

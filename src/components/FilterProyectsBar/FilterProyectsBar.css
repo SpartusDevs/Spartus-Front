@@ -10,7 +10,7 @@
   .leftBar_filterProyects {
       position: absolute;
       left: 5vh;
-      width: 40vh;
+      width: 25%;
       height: max-content;
       background: linear-gradient(to bottom, rgba(23, 28, 158, 0.6), rgba(23, 28, 158, 0.2));
       border-radius: 15px;

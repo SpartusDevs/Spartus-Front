@@ -25,25 +25,9 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa al hacer hover */
     filter: drop-shadow(5px 10px 500px rgba(249, 249, 249, 0.8)); /* Sombra azul con filtro */}
   
-
-.icon_openFilter{
-    font-size: xx-large;
-    animation: gradiantsiconChange 3s linear infinite; 
-}
-
-
-
-@keyframes gradiantsiconChange {
-    0% {
-        color:  rgba(186,154,10,1);
-
-}
- 
-    100% {
-        color:  rgba(255,0,0,1);
-
+    .icon_leftBar{
+      font-size: x-large;
     }
-  }
 
 
   @media (max-width:800px) {
@@ -53,10 +37,4 @@
       margin-left:10%;
     }
  
-  }
-
-  @media(max-width:580px){
-    .icon_openFilter{
-      font-size: x-large;
-    }
   }
