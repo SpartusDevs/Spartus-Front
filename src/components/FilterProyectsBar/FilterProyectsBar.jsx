@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import { Input, DatePicker, FloatButton } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
 import './FilterProyectsBar.css';
 import androidIcon from '../../assets/tecnologiesIcons/android.svg';
 import awsIcon from '../../assets/tecnologiesIcons/aws.svg';
@@ -9,7 +11,8 @@ import reactIcon from '../../assets/tecnologiesIcons/react.svg';
 import springIcon from '../../assets/tecnologiesIcons/spring.svg';
 import vueIcon from '../../assets/tecnologiesIcons/vue.svg';
 
-function FilterProyectsBar() {
+function FilterProyectsBar({ onClose}) {
+
   const technologies = [
     { name: 'Android', icon: androidIcon },
     { name: 'AWS', icon: awsIcon },
@@ -21,10 +24,11 @@ function FilterProyectsBar() {
     { name: 'Vue', icon: vueIcon },
   ];
 
+  // cuando la pantalla es menos a 1500px quiero que 
   return (
-    <div className='leftBar_filterProyects'>
-      <h1 className='title_filterProyects'>Filtrado</h1>
-      
+    <div className='leftBar_filterProyects'  data-aos="fade-right" data-aos-duration="3000">
+      <h1 className='title_filterProyects'>Filtrado <DownOutlined onClick={onClose}/></h1>
+      <p className='pFunction_filterProyects'>Filtra nuestros trabajos según su fecha de cración, nombre, tecnologías</p>
       <div>
         <h4 className='h4_filterProyects'>Por nombre</h4>
         <Input className='inputNombre_filterProyects' placeholder="Por nombre" />

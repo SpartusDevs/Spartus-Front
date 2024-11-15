@@ -1,0 +1,44 @@
+
+  
+  .glass-button_openFilter {
+    position: relative;
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    padding: 15px;
+    height: max-content;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 10px;
+    gap:10px;
+    
+    /* Aplicar la animación de arriba-abajo */
+    animation: moveUpDown 5s infinite ease-in-out;
+  }
+  
+  .glass-button_openFilter:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa al hacer hover */
+    filter: drop-shadow(5px 10px 500px rgba(249, 249, 249, 0.8)); /* Sombra azul con filtro */}
+  
+
+.icon_openFilter{
+    font-size: xx-large;
+    animation: gradiantsiconChange 3s linear infinite; 
+}
+
+
+
+@keyframes gradiantsiconChange {
+    0% {
+        color:  rgba(186,154,10,1);
+
+}
+ 
+    100% {
+        color:  rgba(255,0,0,1);
+
+    }
+  }
