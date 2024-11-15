@@ -1,8 +1,8 @@
 
-  .container_openFilter {
+  .container_leftBar {
     position: absolute;
   }
-  .glass-button_openFilter {
+  .button_leftBar {
     position: relative;
     display: flex ;
     flex-direction: column;
@@ -20,7 +20,7 @@
     animation: moveUpDown 5s infinite ease-in-out;
   }
   
-  .glass-button_openFilter:hover {
+  .button_leftBar:hover {
     transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa al hacer hover */
     filter: drop-shadow(5px 10px 500px rgba(249, 249, 249, 0.8)); /* Sombra azul con filtro */}
@@ -47,7 +47,7 @@
 
 
   @media (max-width:800px) {
-    .container_openFilter {
+    .container_leftBar {
       position: static;
       display: flex;
       margin-left:10%;

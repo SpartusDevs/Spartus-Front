@@ -1,12 +1,11 @@
 import { useState} from "react";
-import { FcKindle, FcAcceptDatabase, FcGenealogy } from "react-icons/fc";
 import GlassMenuBar from "../../components/GlassMenuBar";
 import ProyectsPreview from "../../components/ProyectsPreview/ProyectsPreview"
 import logo2 from '../../assets/logo/1-removebg-preview.png';
 import "./styles/Body.css";
 import { Link } from "react-router-dom";
 import FilterProyectsBar from "../../components/FilterProyectsBar/FilterProyectsBar";
-import OpenFilterGlassButton from "../../components/OpenFilterGlassButton/OpenFilterGlassButton";
+import LeftBar from "../../components/LeftBar/LeftBar";
 function Body() {
   const [isFilterOpen, setIsFilterOpen ] = useState(false);
   const handleIsFilterOpenChange = () =>{
@@ -24,7 +23,7 @@ function Body() {
         <h1 className="gradient-title_about">proyectos</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, blanditiis.</p>
       </div></div>
-   <menubar/> {!isFilterOpen ? <OpenFilterGlassButton onClose={handleIsFilterOpenChange}/> :
+   <menubar/> {!isFilterOpen ? <LeftBar onClose={handleIsFilterOpenChange}/> :
    <FilterProyectsBar onClose={handleIsFilterOpenChange}/> }
    <div className="container_proyects">
         <ProyectsPreview  />
