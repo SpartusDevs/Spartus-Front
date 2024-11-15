@@ -35,9 +35,9 @@
 
   @media (max-width:800px) {
     .container_leftBar {
-      position: static;
-      display: flex;
-      margin-left:10%;
+    flex-direction: row;
+    position: static;
+    margin-left: 10%;
     }
  
   }
