@@ -1,12 +1,13 @@
 import './OpenFilterGlassButton.css';
 import { SearchOutlined, FileDoneOutlined, ArrowLeftOutlined } from '@ant-design/icons'; // Importar el ícono de búsqueda
-
+import { Link } from "react-router-dom";
 function OpenFilterGlassButton({ onClose}) {
 /* */
     return (
         <div style={{position:'absolute'}}>
                <div className="glass-button_openFilter" >
-            <ArrowLeftOutlined className='icon_openFilter' /></div>
+               <Link to="/"> <ArrowLeftOutlined className='icon_openFilter' />
+               </Link></div>
     <div className="glass-button_openFilter" >
     <SearchOutlined className='icon_openFilter' onClick={onClose}/>
    

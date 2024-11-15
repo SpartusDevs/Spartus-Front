@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Input, DatePicker, FloatButton } from 'antd';
+import { Input, DatePicker, FloatButton, Button } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import './FilterProyectsBar.css';
 import androidIcon from '../../assets/tecnologiesIcons/android.svg';
@@ -52,6 +52,17 @@ function FilterProyectsBar({ onClose}) {
             />
           ))}
         </div>
+      </div>
+      <div>
+        <h4 className='h4_filterProyects'>Arquitectura</h4>
+        <div className='arquiButons_filterProyects'>
+        <Button color="primary" variant="outlined"  ghost>
+            Monolitica
+          </Button>
+          <Button color="primary" variant="outlined"  ghost>
+            Microservicio
+          </Button>
+          </div>
       </div>
     </div>
   );
