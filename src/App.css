@@ -39,7 +39,7 @@
 @media (max-width:1080px) {
   .body_titles {
   width: 50% !important;
-  margin: 0 auto 50px auto !important;
+  margin: 1.5rem auto 50px auto !important;
 }
 .menu {
   width: 100%;
