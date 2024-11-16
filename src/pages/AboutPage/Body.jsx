@@ -6,11 +6,14 @@ import "./styles/Body.css";
 import { Link } from "react-router-dom";
 import FilterProyectsBar from "../../components/FilterProyectsBar/FilterProyectsBar";
 import LeftBar from "../../components/LeftBar/LeftBar";
+import ViewProyect from "../../components/ViewProyect/ViewProyect";
 function Body() {
   const [isFilterOpen, setIsFilterOpen ] = useState(false);
   const handleIsFilterOpenChange = () =>{
     setIsFilterOpen(!isFilterOpen)
   }
+
+  const [isProyectOpen, setIsProyectOpen] = useState(false)
 
   return (
     <div className="body_container"> 
@@ -25,15 +28,19 @@ function Body() {
       </div></div>
    <menubar/> {!isFilterOpen ? <LeftBar onClose={handleIsFilterOpenChange}/> :
    <FilterProyectsBar onClose={handleIsFilterOpenChange}/> }
-   <div className="container_proyects">
-        <ProyectsPreview  />
-        <ProyectsPreview />
-        <ProyectsPreview />
-        <ProyectsPreview  />
-        <ProyectsPreview />
-        <ProyectsPreview />
+{!isProyectOpen ? (
+  <div className="container_proyects">
+    {[...Array(6)].map((_, index) => (
+      <ProyectsPreview key={index} onOpen={() => setIsProyectOpen(true)} />
+    ))}
+  </div>
+) : (
+  <div className="proyect_open">
+    <ViewProyect setIsProyectOpen={setIsProyectOpen} />
+  </div>
+)}
 
-      </div>     
+
        <GlassMenuBar data-aos="flip-up" data-aos-duration="3000" />
     </div>
   );

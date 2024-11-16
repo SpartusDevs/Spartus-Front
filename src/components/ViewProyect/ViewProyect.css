@@ -1,0 +1,45 @@
+.container_viewProyect{
+    width: 80%;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(8, 80, 153, 0.652) 0%, #06071b8a 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(15, 29, 224, 0.436);
+}
+
+.header_viewProyect {
+    display: flex;
+    gap: 15rem;
+    justify-content: space-between; 
+}
+
+
+.h1_viewProyect{
+    font-size: x-large;
+    color: rgb(255, 255, 255);
+}
+
+.image_viewProyect{
+    width: 347px;
+    height: 219px;
+    border-radius: 15px;
+}
+.p_viewProyect{  
+   padding: 1rem;
+    font-size: 0.82rem;
+ }
+
+ .h2_viewProyect{
+    padding: 0 0.5rem;
+    font-size: large;
+ }
+
+ .icon_viewProyect{
+    width: 26px;
+    height: 26px;
+    margin: 0 10px;
+}
+.button_viewProyect {
+margin-left: 1rem;
+}

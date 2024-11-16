@@ -1,9 +1,9 @@
 import React from 'react';
 import './ProyectsPreview.css'; // Para el estilo
 
-const ProyectsPreview = () => {
+const ProyectsPreview = ({onOpen}) => {
   return (
-    <div className="card-container_P-Preview">
+    <div className="card-container_P-Preview" onClick={onOpen}>
       <div className="image-container_pr">
         <img
           src="https://www.4webs.es/blog/wp-content/uploads/2019/02/urls-que-es.jpg"
