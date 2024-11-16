@@ -1,6 +1,6 @@
 .container_viewProyect{
     width: 80%;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(180deg, rgba(8, 80, 153, 0.652) 0%, #06071b8a 100%);
     border-radius: 15px;
     padding: 2rem;
@@ -42,4 +42,35 @@
 }
 .button_viewProyect {
 margin-left: 1rem;
+}
+
+@media (max-width:1250px) {
+    .header_viewProyect {
+    display: flex;
+    gap: 1rem;
+
+}
+
+}
+
+
+
+
+@media (max-width:900px) {
+    .header_viewProyect {
+        flex-direction: column;
+        justify-content: none;
+    }
+    .image_viewProyect{
+        margin: 0 auto;
+         width: 90%;
+        margin-bottom: 1rem;
+    }
+}
+
+
+@media (max-width:514px) {
+    .image_viewProyect {
+        height: 200px;
+    }
 }
