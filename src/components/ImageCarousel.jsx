@@ -1,8 +1,9 @@
-import './ImageCard.css'; // Para el estilo
+import './ImageCarousel.css'; // Para el estilo
 
-const ImageCard = () => {
+const ImageCard = ({number}) => {
+
   return (
-    <div className="card-container">
+    <div className={`card-container ${number && 'blue-shadow' }`}>
       <div className="image-container">
         <img
           src="https://www.4webs.es/blog/wp-content/uploads/2019/02/urls-que-es.jpg"

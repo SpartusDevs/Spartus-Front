@@ -44,7 +44,7 @@ function Header() {
         </div>
         <div className='box box-2' data-aos="fade-left"  data-aos-duration="3000">
           <h1 className="lastProyects" >Ultimos proyectos:</h1>
-        <ImageCarousel />
+        <ImageCarousel number={1} />
         <ImageCarousel />
         <ImageCarousel />
         </div>
