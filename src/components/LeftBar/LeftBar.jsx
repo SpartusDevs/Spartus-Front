@@ -29,7 +29,6 @@ function LeftBar({ onClose, isProyectOpen, setIsProyectOpen }) {
         onClick={handleCameBack} 
       />
       <SearchOutlined className="icon_leftBar" onClick={filter} />
-      <FileDoneOutlined className="icon_leftBar" />
     </div>
   );
 }

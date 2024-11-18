@@ -1,6 +1,8 @@
 import { FcKindle, FcAcceptDatabase, FcGenealogy } from "react-icons/fc";
 import GlassMenuBar from "../../components/GlassMenuBar";
 import "./styles/Body.css";
+import Items from "../../components/Items/Items";
+import TextAnimation from "../../components/TextAnimation/TextAnimation";
 
 function Body() {
   const cardsData = [
@@ -39,7 +41,8 @@ function Body() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
           blanditiis.
         </p>
-      </div>
+      </div> 
+      <div className="img_backgraund"></div>
       <div className="body_cards">
         {cardsData.map((card, index) => (
           <div className="card" key={index}>
@@ -48,10 +51,14 @@ function Body() {
             <p>{card.description}</p>
           </div>
         ))}
-      </div>
+      </div> 
       <GlassMenuBar data-aos="flip-up" data-aos-duration="3000" />
+      <div className="img_backgraund"></div>
+      <Items />
+      <TextAnimation />
     </div>
   );
 }
 
 export default Body;
+

@@ -1,0 +1,54 @@
+.container_textAnimation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    position: relative;
+  }
+  
+  
+  .animated-text span {
+    font-size: 3rem;
+    color: #eff2f6; 
+    font-weight: bold;
+    animation: slide 20s infinite; 
+    text-transform: capitalize;
+  }
+  
+  
+  .container_textAnimation p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #bbb;
+
+  }
+
+  .description_textAnimation {
+    width: 30%;
+    margin: 0 auto;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px
+  }
+  
+  button {
+    background-color: transparent;
+    border: 2px solid #000dff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #000dff;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: all 0.3s;
+  }
+  
+  button:hover {
+    background-color: #000dff;
+    color: #0c0f2e;
+  }
+  

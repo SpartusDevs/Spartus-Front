@@ -84,3 +84,15 @@
   color: #ccc;
   font-size: 0.9rem;
  }
+
+
+ .img_backgraund{
+    margin: 0 auto;
+    width: 60%;
+    height: 5px;
+    background-image: url('../../../assets/tecnologiesIcons/istockphoto-1387666645-612x612.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    border-radius: 5px;
+}
