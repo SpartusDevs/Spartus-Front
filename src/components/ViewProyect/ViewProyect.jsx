@@ -11,7 +11,7 @@ import vueIcon from '../../assets/tecnologiesIcons/vue.svg';
 
 function ViewProyect({proyect}) {
   return (
-    <div className="container_viewProyect">
+    <div className="container_viewProyect" data-aos="flip-left"  data-aos-duration="1500">
       <div className="header_viewProyect">
         <div className="description_viewProyect">
           <h1 className="h1_viewProyect">Nombre del Proyecto</h1>
