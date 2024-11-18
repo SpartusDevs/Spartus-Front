@@ -26,7 +26,7 @@ function Body() {
         <h1 className="gradient-title_about">proyectos</h1>
         <p className="p_about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, blanditiis.</p>
       </div></div>
-   <menubar/> {!isFilterOpen ? <LeftBar onClose={handleIsFilterOpenChange}/> :
+   <menubar/> {!isFilterOpen ? <LeftBar onClose={handleIsFilterOpenChange}  isProyectOpen={isProyectOpen} setIsProyectOpen={setIsProyectOpen}/> :
    <FilterProyectsBar onClose={handleIsFilterOpenChange}/> }
 {!isProyectOpen ? (
   <div className="container_proyects">
