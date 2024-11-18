@@ -31,7 +31,7 @@ function Body() {
 {!isProyectOpen ? (
   <div className="container_proyects">
     {[...Array(6)].map((_, index) => (
-      <ProyectsPreview key={index} onOpen={() => setIsProyectOpen(true)} />
+      <ProyectsPreview key={index} onOpen={() => {setIsFilterOpen(false); setIsProyectOpen(true)}} />
     ))}
   </div>
 ) : (
