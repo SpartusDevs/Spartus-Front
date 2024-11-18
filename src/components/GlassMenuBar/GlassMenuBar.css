@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 20rem;
+    width: auto;
     height: 3.5rem;
     background: rgba(255, 255, 255, 0.2); /* Transparente con efecto de vidrio */
     border-radius: 15px;
@@ -14,6 +14,11 @@
     backdrop-filter: blur(10px); /* Efecto de desenfoque */
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 9999;
+  }
+
+  .glass-menu-bar p{
+    padding: 0 20px;
   }
   
   .icon {

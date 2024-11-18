@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from "react";
+import  {useEffect, useState} from "react";
 import { FcKindle, FcAcceptDatabase, FcGenealogy   } from "react-icons/fc";
 import "./GlassMenuBar.css"; // Importar los estilos CSS
-import ButtonScrollToTop from "./ButtonToTop/ButtonToTop";
+import ButtonScrollToTop from "../ButtonToTop/ButtonToTop";
 
 function GlassMenuBar() {
     const [showBar, setShowBar] = useState(false);
@@ -28,9 +28,9 @@ function GlassMenuBar() {
     return (
      <> {showBar && (
         <div className="glass-menu-bar"  >
-         <FcKindle style={{width:'40px', height:'40px'}} className="icon" />
-         <FcGenealogy style={{width:'40px', height:'40px'}} className="icon" />
-      <FcAcceptDatabase style={{width:'40px', height:'40px'}} className="icon" />
+              <p>Impacto Social</p>
+              <p>Empresas</p>
+              <p>Talento destacado</p>
     </div>
   )}
   {showBar && <ButtonScrollToTop/>}

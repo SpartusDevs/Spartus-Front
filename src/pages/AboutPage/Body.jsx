@@ -1,5 +1,4 @@
 import { useState} from "react";
-import GlassMenuBar from "../../components/GlassMenuBar";
 import ProyectsPreview from "../../components/ProyectsPreview/ProyectsPreview"
 import logo2 from '../../assets/logo/1-removebg-preview.png';
 import "./styles/Body.css";
@@ -7,6 +6,7 @@ import { Link } from "react-router-dom";
 import FilterProyectsBar from "../../components/FilterProyectsBar/FilterProyectsBar";
 import LeftBar from "../../components/LeftBar/LeftBar";
 import ViewProyect from "../../components/ViewProyect/ViewProyect";
+import GlassMenuBar from "../../components/GlassMenuBar/GlassMenuBar"
 function Body() {
   const [isFilterOpen, setIsFilterOpen ] = useState(false);
   const handleIsFilterOpenChange = () =>{

@@ -1,5 +1,5 @@
 import { FcKindle, FcAcceptDatabase, FcGenealogy } from "react-icons/fc";
-import GlassMenuBar from "../../components/GlassMenuBar";
+import GlassMenuBar from "../../components/GlassMenuBar/GlassMenuBar"
 import "./styles/Body.css";
 import Items from "../../components/Items/Items";
 import TextAnimation from "../../components/TextAnimation/TextAnimation";
