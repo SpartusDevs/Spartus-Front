@@ -15,12 +15,15 @@
     box-shadow: 0px -10px 555px rgba(38, 52, 255, 0.652);
   }
 
-
+ 
   .card-container:hover {
     box-shadow: 0px -10px 555px rgba(38, 52, 255, 0.652);
     cursor:pointer;
   }
-  
+   .blue-shadow:hover{
+    box-shadow: 10px -10px 125px rgba(38, 52, 255, 0.652);
+  }
+
   
   .image-container img {
     width: 130px;
