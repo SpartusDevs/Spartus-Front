@@ -42,18 +42,22 @@ function Body() {
           blanditiis.
         </p>
       </div> 
-      <div className="img_backgraund"></div>
-      <div className="body_cards">
+     <div className="container_cards">
+     <div className="img_backgraund"></div> 
+     <div className="body_cards">
         {cardsData.map((card, index) => (
           <div className="card" key={index}>
             <div className="icon">{card.icon}</div>
             <h2>{card.title}</h2>
             <p>{card.description}</p>
+           
           </div>
-        ))}
+        ))} 
+        </div> 
+         <div className="img_backgraund"></div>
       </div> 
       <GlassMenuBar data-aos="flip-up" data-aos-duration="3000" />
-      <div className="img_backgraund"></div>
+     
       <Items />
       <TextAnimation />
     </div>

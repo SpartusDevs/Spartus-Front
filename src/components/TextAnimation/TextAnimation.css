@@ -1,76 +1,71 @@
-.container_textAnimation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-size: 2.5rem;
-    color: white;
-    position: relative;
-  }
-  
-  
-  .animated-text span {
-    font-size: 3rem;
-    color: #eff2f6; 
-    font-weight: bold;
-    animation: slide 20s infinite; 
-    text-transform: capitalize;
-  }
-  
-  
-  .container_textAnimation p {
-    margin: 10px 0;
-    font-size: 1rem;
-    color: #bbb;
+.container_intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  position: relative;
+}
 
-  }
+.animated_intro-text span {
+  font-size: 3rem;
+  color: #eff2f6;
+  font-weight: bold;
+  animation: slide 20s infinite;
+  text-transform: capitalize;
+}
 
-  .description_textAnimation {
-    width: 30%;
-    margin: 0 auto;    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap:20px
-  }
-  
-  button {
-    background-color: transparent;
-    border: 2px solid #000dff;
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #000dff;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: all 0.3s;
-  }
-  
-  button:hover {
-    background-color: #000dff;
-    color: #0c0f2e;
-  }
-  
+.container_intro-description {
+  width: 30%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  text-align: center;
+}
 
-  @keyframes show {
-    from {
-      opacity: 0;
-      scale: 25%;
-    }
-    to {
-      opacity: 1;
-      scale: 100%;
-    }
+.container_intro-description p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #bbb;
+}
+
+.join_button {
+  background-color: transparent;
+  border: 2px solid #000dff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #000dff;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: all 0.3s;
+}
+
+.join_button:hover {
+  background-color: #000dff;
+  color: #0c0f2e;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
   }
-
-  .img_textAnimation {
-    view-timeline-name: --image;
-    view-timeline-axis: block;
-
-    animation-timeline: --image;
-    animation-name: show;
-    animation-range: entry 25% cover 50%;
-    animation-fill-mode: both;
-
+  to {
+    opacity: 1;
+    scale: 100%;
   }
+}
+
+.img_intro {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: show;
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
+}

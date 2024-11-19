@@ -39,7 +39,12 @@
     }
   }
 
-
+.container_cards {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin: 0 auto;
+}
 
 .body_cards{
     display: flex;
@@ -88,8 +93,8 @@
 
  .img_backgraund{
     margin: 0 auto;
-    width: 60%;
     height: 5px;
+    width: 100%;
     background-image: url('../../../assets/tecnologiesIcons/istockphoto-1387666645-612x612.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
