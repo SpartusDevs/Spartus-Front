@@ -1,0 +1,58 @@
+.aboutUs {
+    text-align: center;
+    padding: 50px;
+
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: show;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+  
+  }
+  
+  .teamContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  
+  .teamCard {
+    background-color: #111739;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    padding: 20px;
+  }
+  
+  .teamPhoto {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #d66800;
+  }
+  
+  .teamCard h3 {
+    margin-bottom: 10px;
+    color:  #d66800;
+  }
+  
+  .teamCard p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  @keyframes show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

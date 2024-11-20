@@ -1,0 +1,6 @@
+.nav-item:hover {
+    color: #ff5722; /* Ejemplo de color destacado */
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+  

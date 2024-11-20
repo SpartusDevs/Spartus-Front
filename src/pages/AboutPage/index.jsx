@@ -2,15 +2,15 @@ import React from 'react'
 import MenuBar from '../../components/MenuBar/MenuBar'
 import Body from './Body'
 
-function AboutPage() {
+function ProyectsPage() {
   return (
     <div style={{color:'white', width:'100%', minHeight:'100vh'}}>
-     <header className='header'>
+    {/** <header className='header'>
        <MenuBar/>
-      </header>
+      </header> */}
        <Body/>
     </div>
   )
 }
 
-export default AboutPage
+export default ProyectsPage

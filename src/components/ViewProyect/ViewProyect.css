@@ -1,6 +1,6 @@
 .container_viewProyect{
     width: 80%;
-    min-height: 100vh;
+    min-height: 75vh;
     background: linear-gradient(180deg, rgba(8, 80, 153, 0.652) 0%, #06071b8a 100%);
     border-radius: 15px;
     padding: 2rem;

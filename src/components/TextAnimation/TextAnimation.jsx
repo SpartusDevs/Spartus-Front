@@ -1,7 +1,7 @@
 import "./TextAnimation.css"
 function TextAnimation() {
  return (
-    <div className="img_intro">
+    <div className="intro">
       <div className="container_intro">
         <span>Hola,</span>
         <div className="animated_intro-text">

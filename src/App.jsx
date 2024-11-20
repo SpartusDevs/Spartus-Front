@@ -2,7 +2,7 @@ import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'; 
 import AOS from 'aos';
 import LandingPage from './pages/LandingPage/index';
-import AboutPage from './pages/AboutPage/index';
+import ProyectsPage from './pages/AboutPage/index';
 import 'aos/dist/aos.css'; 
 
 
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/about",
-    element: <AboutPage />,
+    element: <ProyectsPage />,
   }
 ]);
 

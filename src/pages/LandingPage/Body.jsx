@@ -3,6 +3,7 @@ import GlassMenuBar from "../../components/GlassMenuBar/GlassMenuBar"
 import "./styles/Body.css";
 import Items from "../../components/Items/Items";
 import TextAnimation from "../../components/TextAnimation/TextAnimation";
+import AboutUs from "../../components/AboutUs/AboutUs";
 
 function Body() {
   const cardsData = [
@@ -60,6 +61,7 @@ function Body() {
      
       <Items />
       <TextAnimation />
+      <AboutUs />
     </div>
   );
 }

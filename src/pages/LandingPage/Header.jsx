@@ -10,6 +10,7 @@ import Body from './Body';
 import MenuBar from '../../components/MenuBar/MenuBar';
 import ImageCarousel from '../../components/ImageCarousel';
 import './styles/Header.css'
+import ProyectsSlider from '../../components/ProyectsSlider/ProyectsSlider';
 
 function Header() {
   const [updateImageLogo, setUpdateImageLogo] = useState(logo);
@@ -33,21 +34,26 @@ function Header() {
       </header>
       <main className='container'>
         <div className='box box-1'>
-          <img src={updateImageLogo} className='img'/>
+          <img src={updateImageLogo} className='img' />
           <img src={logo2Developer} className='absoluteImg'/>
+          <div className='small-box'>
           <p style={{ opacity: flag ? 1 : 0.3 }} className='buttonText_landing'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore autem aliquam accusamus!</p>
           <p   style={{ opacity: flag ? 1 : 0.3 }} className='buttonText_landing'>Lorem, ipsum.</p>
          
        <Button color="danger" variant="solid" className='box-1-button'         style={{ opacity: flag ? 1 : 0 }}
           >  <Link to="/about">Descubre más  </Link></Button>
-      
+      </div>
         </div>
-        <div className='box box-2' data-aos="fade-left"  data-aos-duration="3000">
+        { /*  <div className='box box-2' data-aos="fade-left"  data-aos-duration="3000">
           <h1 className="lastProyects" >Ultimos proyectos:</h1>
-        <ImageCarousel number={1} />
+     <ImageCarousel number={1}  />
         <ImageCarousel />
-        <ImageCarousel />
-        </div>
+        <ImageCarousel />  
+        </div> */}
+<div className='box' data-aos="fade-left"  data-aos-duration="3000">
+<ProyectsSlider />
+</div>
+
       </main>
     </>
   );
