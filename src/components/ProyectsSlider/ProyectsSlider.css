@@ -36,6 +36,7 @@
   .item_proyectSlider img:hover {
     transform: scale(1.1); /* Escala al 110% */
     cursor: pointer;
+    box-shadow: 0px -10px 55px #4c03a088;
 }
   
 

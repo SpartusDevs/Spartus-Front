@@ -51,6 +51,7 @@ function Header() {
         <ImageCarousel />  
         </div> */}
 <div className='box' data-aos="fade-left"  data-aos-duration="3000">
+
 <ProyectsSlider />
 </div>
 
