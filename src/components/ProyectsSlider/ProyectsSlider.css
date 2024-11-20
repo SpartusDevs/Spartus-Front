@@ -29,12 +29,14 @@
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s ease;
-    box-shadow: 60px 50px 555px #ed5d0f51;
+    /*box-shadow: 60px 50px 555px #ed5d0f51; */
+    box-shadow: 60px 50px 555px #070e92b4;
   }
 
   .item_proyectSlider img:hover {
     transform: scale(1.1); /* Escala al 110% */
-  }
+    cursor: pointer;
+}
   
 
   /*
