@@ -3,7 +3,7 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding-top: 30vh;
     overflow: hidden;
     position: relative;
 
@@ -11,8 +11,8 @@
   
   .slider_proyectSlider {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     transform-style: preserve-3d;
     transform: perspective(1000px);
   }
@@ -21,7 +21,7 @@
     position: absolute;
     inset: 0;
     transform: rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
-      translateZ(550px);
+      translateZ(290px);
   }
   
   .item_proyectSlider img {
@@ -29,6 +29,11 @@
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .item_proyectSlider img:hover {
+    transform: scale(1.1); /* Escala al 110% */
   }
   
 
