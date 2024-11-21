@@ -4,6 +4,7 @@ import "./styles/Body.css";
 import Items from "../../components/Items/Items";
 import TextAnimation from "../../components/TextAnimation/TextAnimation";
 import AboutUs from "../../components/AboutUs/AboutUs";
+import ProyectsSlider from "../../components/ProyectsSlider/ProyectsSlider";
 
 function Body() {
   const cardsData = [
@@ -29,6 +30,8 @@ function Body() {
 
   return (
     <div className="body_container">
+
+
       <div
         className="body_titles"
         data-aos="fade-up"

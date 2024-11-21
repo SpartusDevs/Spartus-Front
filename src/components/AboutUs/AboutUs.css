@@ -11,6 +11,10 @@
   
   }
   
+  .aboutUs h2 {
+    font-size: 2rem;
+  }
+
   .teamContainer {
     display: flex;
     justify-content: center;

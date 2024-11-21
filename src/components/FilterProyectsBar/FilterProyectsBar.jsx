@@ -41,6 +41,10 @@ function FilterProyectsBar({ onClose }) {
           className="inputNombre_filterProyects"
           placeholder="Por nombre"
         />
+      </div> 
+      <div>
+        <h4 className="h4_filterProyects">Por Tematica</h4>
+        <DatePicker className="inputNombre_filterProyects" picker="year" />
       </div>
 
       <div>
