@@ -1,7 +1,7 @@
 import "./ProyectsSlider.css";
 
 function ProyectsSlider() {
-  const images = Array(10).fill(
+  const images = Array(7).fill(
     "https://www.4webs.es/blog/wp-content/uploads/2019/02/urls-que-es.jpg"
   );
 
