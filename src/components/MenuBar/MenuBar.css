@@ -1,3 +1,7 @@
+.menu{
+  width: auto;
+  gap:90px;
+}
 .nav-item:hover {
     color: #ff5722; /* Ejemplo de color destacado */
     transition: color 0.3s ease;
