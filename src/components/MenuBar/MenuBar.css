@@ -1,10 +1,19 @@
-.menu{
+.menu {
   width: auto;
-  gap:90px;
+  gap: 50px;
+  display: flex;
 }
+
+.nav-item {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
 .nav-item:hover {
-    color: #ff5722; /* Ejemplo de color destacado */
-    transition: color 0.3s ease;
-    cursor: pointer;
-  }
-  
+  color: #ff5722; /* Ejemplo de color destacado al pasar el mouse */
+}
+
+.nav-item.selected {
+  border-bottom: 2px solid #ff5722; /* Subrayado del elemento seleccionado */
+  color: #ff5722; /* Cambiar color al seleccionado, si lo deseas */
+}
