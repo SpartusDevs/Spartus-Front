@@ -36,28 +36,24 @@ function Header() {
         <div className='box box-1'>
           <img src={updateImageLogo} className='img' />
         {/*  <img src={logo2Developer} className='absoluteImg'/> */}
-          < ProyectsSlider />  <Button color="danger" variant="solid" className='box-1-button'   style={{ opacity: flag ? 1 : 0 }}
-          >  <Link to="/about">Nuestros Pryectos</Link></Button>
+      
           <div className='small-box'> 
               
-        {/*  <p style={{ opacity: flag ? 1 : 0.3 }} className='buttonText_landing'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore autem aliquam accusamus!</p>
-          <p   style={{ opacity: flag ? 1 : 0.3 }} className='buttonText_landing'>Lorem, ipsum.</p>
-         
+   <p style={{ opacity: flag ? 1 : 0.3 }} className='buttonText_landing'>Accede a todos nuestros proeyctos</p>
+         <Button color="danger" variant="solid" className='box-1-button'   style={{ opacity: flag ? 1 : 0 }}
+          >  <Link to="/about">Nuestros Pryectos</Link></Button>
      
-            */}
+            
       </div>
 
         </div>
-        { /*  <div className='box box-2' data-aos="fade-left"  data-aos-duration="3000">
-          <h1 className="lastProyects" >Ultimos proyectos:</h1>
-     <ImageCarousel number={1}  />
+         <div className='box box-2' data-aos="fade-left"  data-aos-duration="3000">    
+          < ProyectsSlider />  
+         
+{  /*   <h1 className="lastProyects" >Ultimos proyectos:</h1> <ImageCarousel number={1}  />
         <ImageCarousel />
-        <ImageCarousel />  
+        <ImageCarousel />  */ }
         </div>
-<div className='box box-2'  data-aos-duration="3000">
-
-
-</div> */}
 
       </main>
     </>
