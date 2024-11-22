@@ -118,10 +118,15 @@
       top: 119px;
       width: 80%;
     }
+    .box-1{
+      margin-top: 0;
+      width: 100%;
+    }
     .img {
-      width: 80%;
+      width: 100%;
     }
-    .box-1-button{
-      padding: 19px 0;
+    .small-box{
+      width: 100%;
     }
+  
 }

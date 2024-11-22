@@ -29,7 +29,11 @@
 }
 
 
-
+@media (max-width:700px) {
+  .menu{
+    gap:auto
+  }
+}
 
 
 

@@ -69,3 +69,12 @@
   animation-range: entry 25% cover 50%;
   animation-fill-mode: both;
 }
+
+
+@media (max-width:700px) {
+  .container_intro-description {
+    width: 85%;
+  }
+
+  
+}

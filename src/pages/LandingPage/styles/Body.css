@@ -101,3 +101,13 @@
     background-size: cover;
     border-radius: 5px;
 }
+
+@media (max-width:700px) {
+    .img_backgraund{
+        width: 80%;
+    }
+
+    .container_cards {
+        width: auto;
+    }
+}

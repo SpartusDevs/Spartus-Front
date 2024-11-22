@@ -26,4 +26,10 @@
   .containter_items p:hover {
     background-color: rgba(255, 255, 255, 0.2); 
     transform: scale(1.02); 
-  
+  }
+
+  @media (max-width:700px) {
+    .containter_items {
+      margin: 50px 20px;
+    }
+  }
