@@ -16,7 +16,8 @@
     }  
 
 .box-1{
- margin-top: -100px;
+  width: 90%;
+ margin-top: -200px;
  display: flex;
  flex-direction: column;
  color:gray;
@@ -130,3 +131,31 @@
     }
   
 }
+
+.espadaIMG {
+  transform: rotate(50deg);
+  width: 150px;
+  height: 150px;
+  position: fixed;
+ right: 0%;
+ top:0%;
+ animation: rotateEspada 20s linear infinite; 
+ z-index: 99999;
+
+}
+
+@keyframes rotateEspada {
+  0% {
+    transform: rotate(0deg); /* Inicia en 0 grados */
+  }
+  25% {
+    transform: rotate(50deg);
+  }
+  50% {
+    transform: rotate(-50deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+

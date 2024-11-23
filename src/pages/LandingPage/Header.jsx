@@ -9,6 +9,7 @@ import ProyectsPreview from "../../components/ProyectsPreview/ProyectsPreview";
 import Body from "./Body";
 import MenuBar from "../../components/MenuBar/MenuBar";
 import ImageCarousel from "../../components/ImageCarousel";
+import ImageEspada from "../../assets/logo/espada.png"
 import "./styles/Header.css";
 import ProyectsSlider from "../../components/ProyectsSlider/ProyectsSlider";
 
@@ -81,6 +82,10 @@ function Header() {
             </>
           )}
         </div>
+        <div style={{height:'10vh', width:'40vh'}}>
+<img src={ImageEspada} alt="icono_espada"  className="espadaIMG"/>
+        </div>
+
       </main>
     </>
   );
