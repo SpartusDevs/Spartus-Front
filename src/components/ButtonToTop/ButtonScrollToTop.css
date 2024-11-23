@@ -16,3 +16,8 @@
     transform: scale(1.1);
   }
   
+  @media (max-width:700px) {
+    .glass-button {
+      right: 5px;
+    }
+  }

@@ -17,7 +17,7 @@
     animation: autoRun 70s linear infinite;  }
  
   .slider_proyectSlider.paused {
-    animation: autoRun 170s linear infinite; 
+    /* animation: autoRun 170s linear infinite; */
   }
   
   .item_proyectSlider {

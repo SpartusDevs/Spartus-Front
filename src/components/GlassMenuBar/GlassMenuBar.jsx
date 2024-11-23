@@ -28,9 +28,10 @@ function GlassMenuBar() {
     return (
      <> {showBar && (
         <div className="glass-menu-bar"  >
-              <p>Impacto Social</p>
-              <p>Empresas</p>
-              <p>Talento destacado</p>
+              <p>Inicio</p>
+              <p>Proyectos</p>
+              <p>Nosotros</p>
+             
     </div>
   )}
   {showBar && <ButtonScrollToTop/>}

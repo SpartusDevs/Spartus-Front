@@ -1,4 +1,3 @@
-import React from 'react';
 import './ProyectsPreview.css'; // Para el estilo
 
 const ProyectsPreview = ({onOpen}) => {

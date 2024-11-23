@@ -6,14 +6,22 @@
 
 .nav-item {
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, border-bottom-width 0.3s ease;
+  border-bottom: 2px solid transparent;
 }
 
 .nav-item:hover {
-  color: #ff5722; /* Ejemplo de color destacado al pasar el mouse */
+  color: #ff5722; 
 }
 
 .nav-item.selected {
-  border-bottom: 2px solid #ff5722; /* Subrayado del elemento seleccionado */
-  color: #ff5722; /* Cambiar color al seleccionado, si lo deseas */
+  color: #ff5722;
+  border-bottom: 2px solid #ff5722;
+  transition: border-bottom 0.3s ease-in-out;
+}
+
+@media (max-width: 700px) {
+  .menu {
+    gap: auto;
+  }
 }
