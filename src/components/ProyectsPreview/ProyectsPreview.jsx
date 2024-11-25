@@ -1,6 +1,6 @@
 import './ProyectsPreview.css'; // Para el estilo
 
-const ProyectsPreview = ({onOpen}) => {
+const ProyectsPreview = ({ onOpen }) => {
   return (
     <div className="card-container_P-Preview" onClick={onOpen}>
       <div className="image-container_pr">
