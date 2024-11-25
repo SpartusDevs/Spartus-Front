@@ -1,18 +1,12 @@
 import { useState, useEffect } from "react";
 import logo from "../../assets/logo/2-removebg-preview.png";
 import logo2 from "../../assets/logo/1-removebg-preview.png";
-import logo2Developer from "../../assets/logo/developer-removebg-preview.png";
 import { Link } from "react-router-dom";
-import molde from "../../assets/Captura de pantalla 2024-11-11 111755.png";
 import { Button } from "antd";
-import ProyectsPreview from "../../components/ProyectsPreview/ProyectsPreview";
-import Body from "./Body";
 import MenuBar from "../../components/MenuBar/MenuBar";
 import ImageCarousel from "../../components/ImageCarousel";
-import ImageEspada from "../../assets/logo/espada.png"
-import "./styles/Header.css";
 import ImageRibbon from "../../components/ImageRibbon/ImageRibbon";
-
+import "./styles/Header.css";
 function Header() {
   const [updateImageLogo, setUpdateImageLogo] = useState(logo);
   const [flag, setFlag] = useState(false);
@@ -46,7 +40,6 @@ function Header() {
       <main className="container">
         <div className="box box-1">
           <img src={updateImageLogo} className="img" />
-          {/*  <img src={logo2Developer} className='absoluteImg'/> */}
 
           <div className="small-box">
             <p

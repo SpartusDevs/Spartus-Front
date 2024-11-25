@@ -10,24 +10,19 @@ const images = [
 ];
 
 const ImageRibbon = () => {
-  const imageVariants = {
-    animate: {
-      y: ["0%", "-200%"], // Se desplaza de su posición inicial hacia arriba
-    },
-  };
+
 
   return (
     <div className="ribbon-container">
       <motion.div
         className="ribbon"
-        animate={{ y: [0, -1200] }} // Desplaza todo hacia arriba
+        animate={{ y: [0, -1200] }} 
         transition={{
-          duration: 20, // Tiempo total del movimiento (ajustable)
-          repeat: Infinity, // Animación infinita
-          ease: "linear", // Velocidad constante
+          duration: 35, 
+          repeat: Infinity, 
+          ease: "linear", 
         }}
       >
-        {/* Muestra las imágenes duplicadas para crear un efecto continuo */}
         {images.concat(images).map((image, index) => (
           <div key={index} className="image-wrapper">
             <img src={image} alt={`img-${index}`} />

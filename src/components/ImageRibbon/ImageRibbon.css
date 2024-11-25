@@ -5,6 +5,9 @@
   position: relative;
   display: flex;
   justify-content:center;
+  padding-left: 20%;
+  padding-top: 10%;
+  opacity: 0.7;
 }
 
 .ribbon-container::before,
@@ -44,5 +47,16 @@
   width: auto;
   height: 100%;
   border-radius: 8px;
-  box-shadow: 10px 10px 25px rgba(71, 146, 203, 0.733); /* Sombra para las imágenes */
+  box-shadow: 10px 10px 25px rgba(1, 85, 202, 0.733); /* Sombra para las imágenes */
+  animation: boxShadowChange 0.3s  infinite linear ;
+}
+
+@keyframes boxShadowChange {
+  0% {
+    box-shadow: 10px 10px 25px rgba(1, 85, 202, 0.733); /* Inicia en 0 grados */
+  }
+
+  100% {
+    box-shadow: 10px 10px 25px rgba(6, 76, 117, 0.733); 
+  }
 }
