@@ -1,16 +1,22 @@
-import { Button, ConfigProvider, Space } from 'antd';
+import { Button } from 'antd';
 import { FaLinkedin } from "react-icons/fa6";
 
-import './GradientButton.css'; // Define los estilos CSS
+import './GradientButton.css'; 
 
-const GradientButton = () => (
-  <ConfigProvider>
-    <Space>
-      <Button type="primary" size="large" className="gradient-btn">
-        Linkedin <FaLinkedin/>
+const GradientButton = ({ index }) => { 
+  const handleClick = () => {
+    if (index === 0) {
+      window.open('https://www.linkedin.com/in/laspiurperezjuan/', '_blank');
+    } else {
+      window.open('https://www.linkedin.com', '_blank');
+    }
+  };
+
+  return (
+      <Button type="primary" size="large" className="gradient-btn" onClick={handleClick}>
+        Linkedin <FaLinkedin />
       </Button>
-    </Space>
-  </ConfigProvider>
-);
+  );
+}
 
 export default GradientButton;
