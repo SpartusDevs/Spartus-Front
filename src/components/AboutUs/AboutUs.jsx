@@ -1,5 +1,6 @@
-import "./AboutUs.css";
 import image from "../../assets/developers/yo.jpg"
+import GradientButton from "../GradientButton/GradientButton";
+import "./AboutUs.css";
 const developers = [
   {
     name: "Juan Laspiur",
@@ -31,6 +32,8 @@ const AboutUs = () => {
             <img src={dev.img} alt={dev.name} className="teamPhoto" />
             <h3>{dev.name}</h3>
             <p>{dev.description}</p>
+            <div className="butons_aboutUs">
+            <GradientButton/></div>
           </div>
         ))}
       </div>

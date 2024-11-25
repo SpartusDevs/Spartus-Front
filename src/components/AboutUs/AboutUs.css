@@ -24,12 +24,14 @@
   }
   
   .teamCard {
+    position: relative;
     background-color: #111739;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 300px;
     padding: 20px;
+    padding-bottom: 70px;
   }
   
   .teamPhoto {
@@ -51,6 +53,16 @@
     color: #555;
     line-height: 1.5;
   }
+  .butons_aboutUs {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: max-content;
+    
+    height: auto;
+  
+
+  }
   
   @keyframes show {
     from {
@@ -60,3 +72,11 @@
       opacity: 1;
     }
   }
+
+
+  @media (min-width: 700px) and (max-width: 1080px) {
+    .teamCard {
+      width: 236px;
+    }
+  }
+  

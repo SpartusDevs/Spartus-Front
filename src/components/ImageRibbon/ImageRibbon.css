@@ -60,3 +60,9 @@
     box-shadow: 10px 10px 25px rgba(6, 76, 117, 0.733); 
   }
 }
+
+@media (max-width:700px) {
+  .ribbon-container { 
+    height: 390px;
+  }
+}
