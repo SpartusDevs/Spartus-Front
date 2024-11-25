@@ -62,16 +62,8 @@ function Header() {
         <div
           className="box"
         >
-          {!isMobile ? (
             <ImageRibbon />
-          ) : (
-            <>
-              <h1 className="lastProyects">Ultimos proyectos:</h1>{" "}
-              <ImageCarousel number={1} />
-              <ImageCarousel />
-              <ImageCarousel />
-            </>
-          )}
+     
         </div> {/**
         <div style={{height:'10vh', width:'40vh'}}>
 <img src={ImageEspada} alt="icono_espada"  className="espadaIMG"/>
