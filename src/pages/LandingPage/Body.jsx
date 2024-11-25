@@ -10,21 +10,21 @@ function Body() {
   const cardsData = [
     {
       icon: <FcKindle style={{ width: "40px", height: "40px" }} />,
-      title: "Pone a prueba tus Soft Skills",
+      title: "Diseño Responsivo",
       description:
-        "Participa en equipos multidisciplinarios y multiculturales con talentos de todo el mundo.",
+        "Creamos diseños adaptables que garantizan una experiencia óptima en cualquier dispositivo o pantalla.",
     },
     {
       icon: <FcGenealogy style={{ width: "40px", height: "40px" }} />,
-      title: "Pone a prueba tus Soft Skills",
+      title: "Infraestructura Segura",
       description:
-        "Participa en equipos multidisciplinarios y multiculturales con talentos de todo el mundo.",
+        "Usamos tecnologías seguras como HTTPS y firewalls para crear sitios web confiables y protegidos.",
     },
     {
       icon: <FcAcceptDatabase style={{ width: "40px", height: "40px" }} />,
-      title: "Pone a prueba tus Soft Skills",
+      title: "Protección de Datos",
       description:
-        "Participa en equipos multidisciplinarios y multiculturales con talentos de todo el mundo.",
+        "Aseguramos la privacidad y seguridad de tu información con protocolos avanzados de protección.",
     },
   ];
 
@@ -38,12 +38,12 @@ function Body() {
         data-aos-anchor-placement="top-bottom"
         data-aos-duration="2000"
       >
-        <h1>Acelera tu</h1>
-        <h1 className="h1_reconversion">Reconversión</h1>
-        <h1 className="gradient-title">Reconversión</h1>
+        {/* Impulsa tu Transformación Digital */}
+        <h1>Impulsa tu</h1>
+        <h1 className="h1_reconversion">Transformación</h1>
+        <h1 className="gradient-title">Digital</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
-          blanditiis.
+        Soluciones innovadoras para crear y optimizar tu presencia online, llevando tu negocio al futuro digital.
         </p>
       </div> 
      <div className="container_cards">

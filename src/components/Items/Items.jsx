@@ -3,10 +3,10 @@ import "./Items.css";
 function Items() {
   return (
     <div className="containter_items">
-      <p>Lorem ipsum dolor sit, saepe, sed, natus susci</p>
-      <p>Lorem ipsum dolor sit,saepe, r? At, ducimus sed, natus</p>
-      <p>Lorem ipsum dolor sit,saepimus sed, natus</p>
-      <p>Lorem ipsum dolor sit, saepe,imus sed, natus</p>
+      <p>Ofrecemos soluciones personalizadas con comunicación continua para satisfacer tus necesidades.</p>
+      <p>Desarrollamos software eficiente, escalable y mantenible.</p>
+      <p>Garantizamos optimo rendimiento web.</p>
+      <p>Soporte, optimización y mantenimiento de codigo</p>
     </div>
   );
 }

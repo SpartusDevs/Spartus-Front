@@ -5,14 +5,13 @@ function TextAnimation() {
       <div className="container_intro">
         <span>Hola,</span>
         <div className="animated_intro-text">
-          <span>MobileDev</span>
+          <span>gracias</span>
         </div>
       </div>
       <div className="container_intro-description">
-        <p>¡Hay una comunidad que te espera!</p>
+        <p>por visitar nuestra página</p>
         <p>
-          Te invitamos a compartir, aprender y crecer junto a una comunidad que
-          busca siempre hacer algo más grande.
+        Contáctate con nosotros sin compromiso y estaremos encantados de ayudarte con lo que necesites.
         </p>
         <button className="join_button">Únete</button>
       </div>
