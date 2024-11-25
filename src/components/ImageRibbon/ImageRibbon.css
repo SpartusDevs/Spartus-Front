@@ -47,17 +47,20 @@
   width: auto;
   height: 100%;
   border-radius: 8px;
-  box-shadow: 10px 10px 25px rgba(1, 85, 202, 0.733); /* Sombra para las imágenes */
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+ /* box-shadow: 10px 10px 25px rgba(1, 85, 202, 0.733); /* Sombra para las imágenes */
   animation: boxShadowChange 0.3s  infinite linear ;
 }
 
 @keyframes boxShadowChange {
   0% {
-    box-shadow: 10px 10px 25px rgba(1, 85, 202, 0.733); /* Inicia en 0 grados */
+  /*  box-shadow: 10px 10px 25px rgba(1, 85, 202, 0.733); /* Inicia en 0 grados */
+    filter: drop-shadow(10px 10px 25px rgba(1, 85, 202, 0.733));
   }
 
   100% {
-    box-shadow: 10px 10px 25px rgba(6, 76, 117, 0.733); 
+    /*box-shadow: 10px 10px 25px rgba(6, 76, 117, 0.733); */
+    filter: drop-shadow(10px 10px 25px rgba(6, 76, 117, 0.733));
   }
 }
 

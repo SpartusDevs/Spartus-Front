@@ -1,15 +1,16 @@
 .menu {
   width: auto;
-  gap: 50px;
+  gap: 75px;
   display: flex;
   align-items: end;
+
 }
 
 .nav-item {
   cursor: pointer;
   transition: color 0.3s ease, border-bottom-width 0.3s ease;
   border-bottom: 2px solid transparent;
-}
+font-size: 1.01rem;}
 
 .nav-item:hover {
   color: #ff5722; 
@@ -17,7 +18,7 @@
 
 .nav-item.selected {
   color: #ff5722;
-  border-bottom: 2px solid #ff5722;
+  border-bottom: 3.5px solid #ff5722;
   transition: border-bottom 0.3s ease-in-out;
 }
 
