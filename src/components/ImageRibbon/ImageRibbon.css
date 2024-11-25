@@ -16,17 +16,17 @@
   position: absolute;
   left: 0;
   right: 0;
-  height: 80px; 
+  height: 140px; 
   z-index: 2; 
 }
 .ribbon-container::before {
   top: 0; /* Posición en la parte superior */
-  background: linear-gradient(to bottom, rgba(1, 5, 30, 0.941), rgba(1, 19, 112, 0.026));
+  background: linear-gradient(to bottom, #06071B, rgba(1, 19, 112, 0.026));
 }
 
 .ribbon-container::after {
   bottom: 0; /* Posición en la parte inferior */
-  background: linear-gradient(to top, rgba(1, 5, 30, 0.941), rgba(1, 19, 112, 0.026));
+  background: linear-gradient(to top, #06071B, rgba(1, 19, 112, 0.026));
 }
 
 .ribbon {
