@@ -11,7 +11,7 @@ import MenuBar from "../../components/MenuBar/MenuBar";
 import ImageCarousel from "../../components/ImageCarousel";
 import ImageEspada from "../../assets/logo/espada.png"
 import "./styles/Header.css";
-import ProyectsSlider from "../../components/ProyectsSlider/ProyectsSlider";
+import ImageRibbon from "../../components/ImageRibbon/ImageRibbon";
 
 function Header() {
   const [updateImageLogo, setUpdateImageLogo] = useState(logo);
@@ -67,12 +67,10 @@ function Header() {
           </div>
         </div>
         <div
-          className="box box-2"
-          data-aos="fade-left"
-          data-aos-duration="3000"
+          className="box"
         >
           {!isMobile ? (
-            <ProyectsSlider />
+            <ImageRibbon />
           ) : (
             <>
               <h1 className="lastProyects">Ultimos proyectos:</h1>{" "}
@@ -81,10 +79,10 @@ function Header() {
               <ImageCarousel />
             </>
           )}
-        </div>
+        </div> {/**
         <div style={{height:'10vh', width:'40vh'}}>
 <img src={ImageEspada} alt="icono_espada"  className="espadaIMG"/>
-        </div>
+        </div> */}
 
       </main>
     </>
