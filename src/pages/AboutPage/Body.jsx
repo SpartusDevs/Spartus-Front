@@ -1,12 +1,12 @@
 import { useState } from "react";
+import AboutProyectTittles from "../../components/AboutProyectTittles/AboutProyectTittles";
 import ProyectsPreview from "../../components/ProyectsPreview/ProyectsPreview";
-import logo2 from "../../assets/logo/1-removebg-preview.png";
-import "./styles/Body.css";
-import { Link } from "react-router-dom";
 import FilterProyectsBar from "../../components/FilterProyectsBar/FilterProyectsBar";
 import LeftBar from "../../components/LeftBar/LeftBar";
 import ViewProyect from "../../components/ViewProyect/ViewProyect";
 import GlassMenuBar from "../../components/GlassMenuBar/GlassMenuBar";
+import "./styles/Body.css";
+
 function Body() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const handleIsFilterOpenChange = () => {
@@ -17,20 +17,7 @@ function Body() {
 
   return (
     <div className="body_container">
-      <div className="body_titles_about">
-        <Link to="/">
-          <img src={logo2} className="img_about" />
-        </Link>
-        <div className="titlesText_about">
-          <h1 className="title_about">Nuestros</h1>
-          <h1 className="gradient-title_about">proyectos</h1>
-          <p className="p_about">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
-            blanditiis.
-          </p>
-        </div>
-      </div>
-      <menubar />{" "}
+      <AboutProyectTittles />
       {!isFilterOpen ? (
         <LeftBar
           onClose={handleIsFilterOpenChange}

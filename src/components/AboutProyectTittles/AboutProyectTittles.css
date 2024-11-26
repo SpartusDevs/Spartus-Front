@@ -1,0 +1,53 @@
+.body_titles_about {
+    width: 43%;  
+    margin: 10px auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;  
+  }
+  .title_about {
+    font-size: 2rem;
+    color: #fff;
+  }
+  .titlesText_about {
+    padding-top: 1rem;
+  }
+  .img_about {
+    width: 160px;
+    height: 160px;
+  }
+  .gradient-title_about {
+    animation: gradiantstitleChange 3s linear infinite; 
+    font-size: 2rem;
+    margin-top: -0.8rem;
+  }
+  .p_about {
+    font-size: 0.82rem;
+  }
+  
+  @keyframes gradiantstitleChange {
+    0% {
+      background: linear-gradient(90deg, rgba(186,154,10,1) 0%, rgba(121,9,9,1) 35%, rgba(255,0,0,1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    100% {
+      background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(121,9,9,1) 35%, rgba(186,154,10,1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  
+  @media (max-width:1300px){ 
+    .img_about {
+        width: 120px;
+       height: 120px;
+      }
+      .title_about{
+        font-size: 25px;
+      } 
+      .gradient-title_about{
+        font-size: 25px;
+        padding-top: 5px;
+      }  
+  }
