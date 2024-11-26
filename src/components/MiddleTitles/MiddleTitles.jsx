@@ -1,5 +1,5 @@
-import "./TextAnimation.css"
-function TextAnimation() {
+import "./MiddleTitles.css"
+function MiddleTitles() {
  return (
     <div className="intro">
       <div className="container_intro">
@@ -19,4 +19,4 @@ function TextAnimation() {
   )
 }
 
-export default TextAnimation
+export default MiddleTitles

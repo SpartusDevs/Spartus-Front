@@ -1,6 +1,6 @@
-import "./Items.css";
+import "./GrayItemList.css";
 
-function Items() {
+function GrayItemList() {
   return (
     <div className="containter_items">
       <p>Ofrecemos soluciones personalizadas con comunicación continua para satisfacer tus necesidades.</p>
@@ -11,4 +11,4 @@ function Items() {
   );
 }
 
-export default Items;
+export default GrayItemList;

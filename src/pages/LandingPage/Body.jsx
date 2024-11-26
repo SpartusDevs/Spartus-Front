@@ -1,10 +1,11 @@
 import { FcKindle, FcAcceptDatabase, FcGenealogy } from "react-icons/fc";
-import GlassMenuBar from "../../components/GlassMenuBar/GlassMenuBar"
-import "./styles/Body.css";
-import Items from "../../components/Items/Items";
-import TextAnimation from "../../components/TextAnimation/TextAnimation";
+import GlassMenuBar from "../../components/GlassMenuBar/GlassMenuBar";
+import GrayItemList from "../../components/GrayItemList/GrayItemList";
+import AnimatedTitles from "../../components/AnimatedTitles/AnimatedTitles";
+import FeatureCards from "../../components/FeatureCards/FeatureCards";
+import MiddleTitles from "../../components/MiddleTitles/MiddleTitles";
 import AboutUs from "../../components/AboutUs/AboutUs";
-import ProyectsSlider from "../../components/ProyectsSlider/ProyectsSlider";
+import "./styles/Body.css";
 
 function Body() {
   const cardsData = [
@@ -30,44 +31,14 @@ function Body() {
 
   return (
     <div className="body_container">
-
-
-      <div
-        className="body_titles"
-        data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom"
-        data-aos-duration="2000"
-      >
-        {/* Impulsa tu Transformación Digital */}
-        <h1>Impulsa tu</h1>
-        <h1 className="h1_reconversion">Transformación</h1>
-        <h1 className="gradient-title">Digital</h1>
-        <p>
-        Soluciones innovadoras para crear y optimizar tu presencia online, llevando tu negocio al futuro digital.
-        </p>
-      </div> 
-     <div className="container_cards">
-     <div className="img_backgraund"></div> 
-     <div className="body_cards">
-        {cardsData.map((card, index) => (
-          <div className="card" key={index}>
-            <div className="icon">{card.icon}</div>
-            <h2>{card.title}</h2>
-            <p>{card.description}</p>
-           
-          </div>
-        ))} 
-        </div> 
-         <div className="img_backgraund"></div>
-      </div> 
+      <AnimatedTitles />
+      <FeatureCards cardsData={cardsData} />
       <GlassMenuBar data-aos="flip-up" data-aos-duration="3000" />
-     
-      <Items />
-      <TextAnimation />
+      <GrayItemList />
+      <MiddleTitles />
       <AboutUs />
     </div>
   );
 }
 
 export default Body;
-
