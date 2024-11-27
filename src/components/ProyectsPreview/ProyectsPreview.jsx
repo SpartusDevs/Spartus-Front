@@ -2,7 +2,8 @@ import './ProyectsPreview.css'; // Para el estilo
 
 const ProyectsPreview = ({ onOpen }) => {
   return (
-    <div className="card-container_P-Preview" onClick={onOpen}>
+    <div className="card-container_P-Preview" onClick={onOpen} data-aos="zoom-in"
+    data-aos-duration="3000">
       <div className="image-container_pr">
         <img
           src="https://www.4webs.es/blog/wp-content/uploads/2019/02/urls-que-es.jpg"

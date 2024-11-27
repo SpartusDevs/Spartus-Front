@@ -1,7 +1,7 @@
 import { useState } from "react";
 import AboutProyectTittles from "../../components/AboutProyectTittles/AboutProyectTittles";
 import ProyectsPreview from "../../components/ProyectsPreview/ProyectsPreview";
-import FilterProyectsBar from "../../components/FilterProyectsBar/FilterProyectsBar";
+import NewFilterBar from "../../components/NEWFILTERBAR/NewFilterBar.jsx";
 import LeftBar from "../../components/LeftBar/LeftBar";
 import ViewProyect from "../../components/ViewProyect/ViewProyect";
 import GlassMenuBar from "../../components/GlassMenuBar/GlassMenuBar";
@@ -18,19 +18,26 @@ function Body() {
   return (
     <div className="body_container">
       <AboutProyectTittles />
-      {!isFilterOpen ? (
+      {/*!isFilterOpen ? (
         <LeftBar
           onClose={handleIsFilterOpenChange}
           isProyectOpen={isProyectOpen}
           setIsProyectOpen={setIsProyectOpen}
         />
       ) : (
-        <FilterProyectsBar onClose={handleIsFilterOpenChange} />
-      )}
+      
+      ) */}
+
+<LeftBar
+          onClose={handleIsFilterOpenChange}
+          isProyectOpen={isProyectOpen}
+          setIsProyectOpen={setIsProyectOpen}
+        />
+  <NewFilterBar onClose={handleIsFilterOpenChange} />
       {!isProyectOpen ? (
         <div className="container_proyects">
           {[...Array(6)].map((_, index) => (
-            <ProyectsPreview
+            <ProyectsPreview  
               key={index}
               onOpen={() => {
                 setIsFilterOpen(false);

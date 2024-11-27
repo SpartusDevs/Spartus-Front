@@ -1,11 +1,14 @@
 .container_viewProyect{
+    position: absolute;
     width: 80%;
-    min-height: 75vh;
-    background: linear-gradient(180deg, rgba(8, 80, 153, 0.652) 0%, #06071b8a 100%);
-    border-radius: 15px;
+    height: 85vh;
+    top:5%;
+    left: 10%;
+    background: linear-gradient(180deg, rgb(2, 119, 235) 0%, rgb(2, 119, 235) 100%);
+    border-radius: 5px;
     padding: 2rem;
     margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(15, 29, 224, 0.436);
+   /* box-shadow: 0 4px 8px rgba(15, 29, 224, 0.436); */
 }
 
 .header_viewProyect {
@@ -23,7 +26,7 @@
 .image_viewProyect{
     width: 347px;
     height: 219px;
-    border-radius: 15px;
+    border-radius: 5px;
     box-shadow: 0 4px 8px rgba(1, 24, 48, 0.436);
 }
 .p_viewProyect{  

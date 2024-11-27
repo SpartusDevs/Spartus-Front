@@ -1,9 +1,10 @@
 .body_titles_about {
     width: 43%;  
-    margin: 10px auto;
+    margin: 0px auto;
     display: flex;
     align-items: flex-start;
     gap: 30px;  
+    margin-top: -78px;
   }
   .title_about {
     font-size: 2rem;

@@ -2,17 +2,15 @@
     height: max-content;
     width: 100%;
     background: #06071B;
-    padding-top: 0px;
     margin-top: -20px;
 }
 
 
   .container_proyects {
-  position: absolute;
+  width: 56%;
+  margin: 0 auto;
   right: 0;  
-  width: 71%; 
-  padding: 0 1rem;
-  padding-bottom: 10vh;
+  padding: 5vh none;
   display: flex;
   gap: 1rem;  
   flex-wrap: wrap;
