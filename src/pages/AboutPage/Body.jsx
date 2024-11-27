@@ -33,7 +33,8 @@ function Body() {
           isProyectOpen={isProyectOpen}
           setIsProyectOpen={setIsProyectOpen}
         />
-  <NewFilterBar onClose={handleIsFilterOpenChange} />
+         {!isProyectOpen   && 
+  <NewFilterBar onClose={handleIsFilterOpenChange} /> }
       {!isProyectOpen ? (
         <div className="container_proyects">
           {[...Array(12)].map((_, index) => (

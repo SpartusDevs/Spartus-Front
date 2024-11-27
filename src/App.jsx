@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AOS from 'aos';
 import LandingPage from './pages/LandingPage/index';
 import ProyectsPage from './pages/AboutPage/index';
+import Dashboard from './pages/DashBoard/Dashboard'
 import 'aos/dist/aos.css'; 
 
 
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <ProyectsPage />,
+  },
+  { 
+    path:"/dashboard",
+    element: <Dashboard/>
   }
 ]);
 

@@ -51,4 +51,7 @@
         font-size: 25px;
         padding-top: 5px;
       }  
-  }
+      .body_titles_about  {
+        margin-top: -2px;
+      }
+    }
