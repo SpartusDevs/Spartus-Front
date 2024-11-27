@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Input, DatePicker, Button, Select } from "antd";
 import androidIcon from "../../assets/tecnologiesIcons/android.svg";
 import awsIcon from "../../assets/tecnologiesIcons/aws.svg";
@@ -12,6 +12,7 @@ import "./NewFilterBar.css";
 
 function NewFilterBar({ onClose }) {
   const [selectedArchitecture, setSelectedArchitecture] = useState("monolitica");
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1250);
 
   const technologies = [
     { name: "Android", icon: androidIcon },
@@ -48,8 +49,23 @@ function NewFilterBar({ onClose }) {
     setSelectedArchitecture(architecture);
   };
 
+  // Detectar cambios de tamaño de ventana
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 1250);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Limpieza del evento al desmontar
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="leftBar_filterProyects">
+      {/* Siempre se muestran los filtros de Por nombre y Por temática */}
       <div>
         <h4 className="h4_filterProyects">Por nombre</h4>
         <Input className="inputNombre_filterProyects" placeholder="Por nombre" />
@@ -63,38 +79,44 @@ function NewFilterBar({ onClose }) {
           style={{ width: "12rem" }}
         />
       </div>
-      <div>
-        <h4 className="h4_filterProyects">Por año</h4>
-        <DatePicker className="inputNombre_filterProyects" picker="year" />
-      </div>
-      <div>
-        <h4 className="h4_filterProyects">Por tecnología</h4>
-        <Select
-          className="inputNombre_filterProyects"
-          placeholder="Selecciona una tecnología"
-          options={technologyOptions}
-          style={{ width: "12rem" }}
-        />
-      </div>
-      <div>
-        <h4 className="h4_filterProyects">Arquitectura</h4>
-        <div className="arquiButons_filterProyects">
-          <Button
-            type={selectedArchitecture === "monolitica" ? "primary" : "default"}
-            onClick={() => handleArchitectureClick("monolitica")}
-            ghost 
-          >
-            Monolítica
-          </Button>
-          <Button
-            type={selectedArchitecture === "microservicio" ? "primary" : "default"}
-            onClick={() => handleArchitectureClick("microservicio")}
-            ghost 
-          >
-            Microservicio
-          </Button>
-        </div>
-      </div>
+
+      {/* Otros filtros visibles solo si la pantalla es mayor o igual a 1250px */}
+      {!isSmallScreen && (
+        <>
+          <div>
+            <h4 className="h4_filterProyects">Por año</h4>
+            <DatePicker className="inputNombre_filterProyects" picker="year" />
+          </div>
+          <div>
+            <h4 className="h4_filterProyects">Por tecnología</h4>
+            <Select
+              className="inputNombre_filterProyects"
+              placeholder="Selecciona una tecnología"
+              options={technologyOptions}
+              style={{ width: "12rem" }}
+            />
+          </div>
+          <div>
+            <h4 className="h4_filterProyects">Arquitectura</h4>
+            <div className="arquiButons_filterProyects">
+              <Button
+                type={selectedArchitecture === "monolitica" ? "primary" : "default"}
+                onClick={() => handleArchitectureClick("monolitica")}
+                ghost
+              >
+                Monolítica
+              </Button>
+              <Button
+                type={selectedArchitecture === "microservicio" ? "primary" : "default"}
+                onClick={() => handleArchitectureClick("microservicio")}
+                ghost
+              >
+                Microservicio
+              </Button>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }

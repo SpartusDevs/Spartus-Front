@@ -17,7 +17,7 @@ function Body() {
 
   return (
     <div className="body_container">
-      <AboutProyectTittles />
+  {!isProyectOpen   && <AboutProyectTittles /> }
       {/*!isFilterOpen ? (
         <LeftBar
           onClose={handleIsFilterOpenChange}
@@ -36,7 +36,7 @@ function Body() {
   <NewFilterBar onClose={handleIsFilterOpenChange} />
       {!isProyectOpen ? (
         <div className="container_proyects">
-          {[...Array(6)].map((_, index) => (
+          {[...Array(12)].map((_, index) => (
             <ProyectsPreview  
               key={index}
               onOpen={() => {
