@@ -1,10 +1,10 @@
 import { FcKindle, FcAcceptDatabase, FcGenealogy } from "react-icons/fc";
 import GlassMenuBar from "../../components/GlassMenuBar/GlassMenuBar";
-import GrayItemList from "../../components/GrayItemList/GrayItemList";
-import AnimatedTitles from "../../components/AnimatedTitles/AnimatedTitles";
-import FeatureCards from "../../components/FeatureCards/FeatureCards";
-import MiddleTitles from "../../components/MiddleTitles/MiddleTitles";
-import AboutUs from "../../components/AboutUs/AboutUs";
+import GrayItemList from "../../components/LandingPage/GrayItemList/GrayItemList";
+import AnimatedTitles from "../../components/LandingPage/AnimatedTitles/AnimatedTitles";
+import FeatureCards from "../../components/LandingPage/FeatureCards/FeatureCards";
+import MiddleTitles from "../../components/LandingPage/MiddleTitles/MiddleTitles";
+import AboutUs from "../../components/LandingPage/AboutUs/AboutUs";
 import "./styles/Body.css";
 
 function Body() {

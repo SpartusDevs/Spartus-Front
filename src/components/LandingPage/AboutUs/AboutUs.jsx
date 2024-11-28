@@ -1,6 +1,6 @@
-import image from "../../assets/developers/yo.jpg"
-import image2 from "../../assets/developers/otro2.jpg"
-import image3 from "../../assets/developers/otro3.jpg"
+import image from "../../../assets/developers/yo.jpg"
+import image2 from "../../../assets/developers/otro2.jpg"
+import image3 from "../../../assets/developers/otro3.jpg"
 import GradientButton from "../GradientButton/GradientButton";
 import "./AboutUs.css";
 const developers = [

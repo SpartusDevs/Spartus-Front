@@ -1,47 +1,30 @@
 import { useState } from "react";
-import AboutProyectTittles from "../../components/AboutProyectTittles/AboutProyectTittles";
-import ProyectsPreview from "../../components/ProyectsPreview/ProyectsPreview";
-import NewFilterBar from "../../components/NEWFILTERBAR/NewFilterBar.jsx";
-import LeftBar from "../../components/LeftBar/LeftBar";
-import ViewProyect from "../../components/ViewProyect/ViewProyect";
+import AboutProyectTittles from "../../components/AboutPage/AboutProyectTittles/AboutProyectTittles";
+import ProyectsPreview from "../../components/AboutPage/ProyectsPreview/ProyectsPreview";
+import FilterBar from "../../components/AboutPage/FilterBar/FilterBar.jsx";
+import LeftBar from "../../components/AboutPage/LeftBar/LeftBar";
+import ViewProyectDetail from "../../components/AboutPage/ViewProyectDetail/ViewProyectDetail";
 import GlassMenuBar from "../../components/GlassMenuBar/GlassMenuBar";
 import "./styles/Body.css";
 
 function Body() {
-  const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const handleIsFilterOpenChange = () => {
-    setIsFilterOpen(!isFilterOpen);
-  };
-
   const [isProyectOpen, setIsProyectOpen] = useState(false);
 
   return (
     <div className="body_container">
-  {!isProyectOpen   && <AboutProyectTittles /> }
-      {/*!isFilterOpen ? (
-        <LeftBar
-          onClose={handleIsFilterOpenChange}
-          isProyectOpen={isProyectOpen}
-          setIsProyectOpen={setIsProyectOpen}
-        />
-      ) : (
-      
-      ) */}
+      {!isProyectOpen && <AboutProyectTittles />}
 
-<LeftBar
-          onClose={handleIsFilterOpenChange}
-          isProyectOpen={isProyectOpen}
-          setIsProyectOpen={setIsProyectOpen}
-        />
-         {!isProyectOpen   && 
-  <NewFilterBar onClose={handleIsFilterOpenChange} /> }
+      <LeftBar
+        isProyectOpen={isProyectOpen}
+        setIsProyectOpen={setIsProyectOpen}
+      />
+      {!isProyectOpen && <FilterBar />}
       {!isProyectOpen ? (
         <div className="container_proyects">
           {[...Array(12)].map((_, index) => (
-            <ProyectsPreview  
+            <ProyectsPreview
               key={index}
               onOpen={() => {
-                setIsFilterOpen(false);
                 setIsProyectOpen(true);
               }}
             />
@@ -49,7 +32,7 @@ function Body() {
         </div>
       ) : (
         <div className="proyect_open">
-          <ViewProyect setIsProyectOpen={setIsProyectOpen} />
+          <ViewProyectDetail setIsProyectOpen={setIsProyectOpen} />
         </div>
       )}
       <GlassMenuBar data-aos="flip-up" data-aos-duration="3000" />

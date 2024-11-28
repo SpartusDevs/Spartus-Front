@@ -6,8 +6,8 @@ import {
 import {  useNavigate } from "react-router-dom";
 import "./LeftBar.css";
 
-function LeftBar({ onClose, isProyectOpen, setIsProyectOpen }) {
-  const navigate = useNavigate(); // Hook para redirigir programáticamente
+function LeftBar({ isProyectOpen, setIsProyectOpen }) {
+  const navigate = useNavigate(); 
 
   const handleCameBack = () => {
     if (isProyectOpen) {
@@ -17,10 +17,6 @@ function LeftBar({ onClose, isProyectOpen, setIsProyectOpen }) {
     }
   };
 
- const filter =()=>{
-  setIsProyectOpen(false);
-  onClose()
- }
 
   return (
     <div className="container_leftBar">

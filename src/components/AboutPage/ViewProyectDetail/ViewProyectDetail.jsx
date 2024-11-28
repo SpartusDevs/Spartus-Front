@@ -1,15 +1,15 @@
-import "./ViewProyect.css";
+import "./ViewProyectDetail.css";
 import {Button } from 'antd';
-import androidIcon from '../../assets/tecnologiesIcons/android.svg';
-import awsIcon from '../../assets/tecnologiesIcons/aws.svg';
-import expoIcon from '../../assets/tecnologiesIcons/expo.svg';
-import javaIcon from '../../assets/tecnologiesIcons/java.svg';
-import nodeIcon from '../../assets/tecnologiesIcons/node.svg';
-import reactIcon from '../../assets/tecnologiesIcons/react.svg';
-import springIcon from '../../assets/tecnologiesIcons/spring.svg';
-import vueIcon from '../../assets/tecnologiesIcons/vue.svg';
+import androidIcon from '../../../assets/tecnologiesIcons/android.svg';
+import awsIcon from '../../../assets/tecnologiesIcons/aws.svg';
+import expoIcon from '../../../assets/tecnologiesIcons/expo.svg';
+import javaIcon from '../../../assets/tecnologiesIcons/java.svg';
+import nodeIcon from '../../../assets/tecnologiesIcons/node.svg';
+import reactIcon from '../../../assets/tecnologiesIcons/react.svg';
+import springIcon from '../../../assets/tecnologiesIcons/spring.svg';
+import vueIcon from '../../../assets/tecnologiesIcons/vue.svg';
 
-function ViewProyect({proyect}) {
+function ViewProyectDetail({proyect}) {
   return (
     <div className="container_viewProyect" >
       <div className="header_viewProyect">
@@ -37,4 +37,4 @@ function ViewProyect({proyect}) {
   );
 }
 
-export default ViewProyect;
+export default ViewProyectDetail;

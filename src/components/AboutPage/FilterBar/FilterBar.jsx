@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import { Input, DatePicker, Button, Select } from "antd";
-import androidIcon from "../../assets/tecnologiesIcons/android.svg";
-import awsIcon from "../../assets/tecnologiesIcons/aws.svg";
-import expoIcon from "../../assets/tecnologiesIcons/expo.svg";
-import javaIcon from "../../assets/tecnologiesIcons/java.svg";
-import nodeIcon from "../../assets/tecnologiesIcons/node.svg";
-import reactIcon from "../../assets/tecnologiesIcons/react.svg";
-import springIcon from "../../assets/tecnologiesIcons/spring.svg";
-import vueIcon from "../../assets/tecnologiesIcons/vue.svg";
-import "./NewFilterBar.css";
+import androidIcon from "../../../assets/tecnologiesIcons/android.svg";
+import awsIcon from "../../../assets/tecnologiesIcons/aws.svg";
+import expoIcon from "../../../assets/tecnologiesIcons/expo.svg";
+import javaIcon from "../../../assets/tecnologiesIcons/java.svg";
+import nodeIcon from "../../../assets/tecnologiesIcons/node.svg";
+import reactIcon from "../../../assets/tecnologiesIcons/react.svg";
+import springIcon from "../../../assets/tecnologiesIcons/spring.svg";
+import vueIcon from "../../../assets/tecnologiesIcons/vue.svg";
+import "./FilterBar.css";
 
-function NewFilterBar({ onClose }) {
+function FilterBar() {
   const [selectedArchitecture, setSelectedArchitecture] = useState("monolitica");
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1250);
 
@@ -121,4 +121,4 @@ function NewFilterBar({ onClose }) {
   );
 }
 
-export default NewFilterBar;
+export default FilterBar;
