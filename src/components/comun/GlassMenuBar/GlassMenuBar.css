@@ -19,6 +19,7 @@
 
   .glass-menu-bar p{
     padding: 0 20px;
+    cursor: pointer;
   }
   
   .icon {
