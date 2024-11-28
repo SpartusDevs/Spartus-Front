@@ -3,7 +3,7 @@ import logo from "../../assets/logo/2-removebg-preview.png";
 import logo2 from "../../assets/logo/1-removebg-preview.png";
 import { useNavigate  } from "react-router-dom";
 import { Button } from "antd";
-import MenuBar from "../../components/MenuBar/MenuBar";
+import MenuBar from "../../components/comun/MenuBar/MenuBar";
 import ImageRibbon from "../../components/LandingPage/ImageRibbon/ImageRibbon";
 import "./styles/Header.css";
 function Header() {

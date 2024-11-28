@@ -1,9 +1,5 @@
-import {
-  SearchOutlined,
-  FileDoneOutlined,
-  ArrowLeftOutlined,
-} from "@ant-design/icons";
 import {  useNavigate } from "react-router-dom";
+import { ArrowLeftOutlined } from "@ant-design/icons";
 import "./LeftBar.css";
 
 function LeftBar({ isProyectOpen, setIsProyectOpen }) {
@@ -24,7 +20,6 @@ function LeftBar({ isProyectOpen, setIsProyectOpen }) {
         className="icon_leftBar"
         onClick={handleCameBack} 
       />
-    {/*  <SearchOutlined className="icon_leftBar" onClick={filter} /> */}
     </div>
   );
 }

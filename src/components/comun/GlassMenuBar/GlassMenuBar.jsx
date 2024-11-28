@@ -1,7 +1,7 @@
 import  {useEffect, useState} from "react";
-import { FcKindle, FcAcceptDatabase, FcGenealogy   } from "react-icons/fc";
-import "./GlassMenuBar.css"; // Importar los estilos CSS
 import ButtonScrollToTop from "../ButtonToTop/ButtonToTop";
+import "./GlassMenuBar.css"; 
+
 
 function GlassMenuBar() {
     const [showBar, setShowBar] = useState(false);

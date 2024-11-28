@@ -1,5 +1,5 @@
 import { FcKindle, FcAcceptDatabase, FcGenealogy } from "react-icons/fc";
-import GlassMenuBar from "../../components/GlassMenuBar/GlassMenuBar";
+import GlassMenuBar from "../../components/comun/GlassMenuBar/GlassMenuBar";
 import GrayItemList from "../../components/LandingPage/GrayItemList/GrayItemList";
 import AnimatedTitles from "../../components/LandingPage/AnimatedTitles/AnimatedTitles";
 import FeatureCards from "../../components/LandingPage/FeatureCards/FeatureCards";

@@ -10,8 +10,6 @@ const images = [
 ];
 
 const ImageRibbon = () => {
-
-
   return (
     <div className="ribbon-container">
       <motion.div

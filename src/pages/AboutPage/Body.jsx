@@ -4,7 +4,7 @@ import ProyectsPreview from "../../components/AboutPage/ProyectsPreview/Proyects
 import FilterBar from "../../components/AboutPage/FilterBar/FilterBar.jsx";
 import LeftBar from "../../components/AboutPage/LeftBar/LeftBar";
 import ViewProyectDetail from "../../components/AboutPage/ViewProyectDetail/ViewProyectDetail";
-import GlassMenuBar from "../../components/GlassMenuBar/GlassMenuBar";
+import GlassMenuBar from "../../components/comun/GlassMenuBar/GlassMenuBar";
 import "./styles/Body.css";
 
 function Body() {
