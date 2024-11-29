@@ -1,8 +1,10 @@
 .footer {
+  position: relative;
   background: linear-gradient(135deg, #06071B, #111739);
   color: #ddd;
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
+  z-index: 9999999999999;
 
 }
 
