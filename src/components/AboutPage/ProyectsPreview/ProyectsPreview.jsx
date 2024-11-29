@@ -1,6 +1,7 @@
 import './ProyectsPreview.css'; // Para el estilo
 
-const ProyectsPreview = ({ onOpen }) => {
+
+const ProyectsPreview = ({ onOpen, language }) => {
   return (
     <div className="card-container_P-Preview" onClick={onOpen} data-aos="zoom-in"
     data-aos-duration="3000">

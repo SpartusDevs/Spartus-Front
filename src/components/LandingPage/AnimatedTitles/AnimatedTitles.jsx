@@ -1,6 +1,25 @@
 import "./AnimatedTitles.css";
 
-function AnimatedTitles() {
+function AnimatedTitles({ language }) {
+  const translations = {
+    es: {
+      title1: "Impulsa tu",
+      title2: "Transformación",
+      title3: "Digital",
+      description:
+        "Soluciones innovadoras para crear y optimizar tu presencia online, llevando tu negocio al futuro digital.",
+    },
+    en: {
+      title1: "Boost Your",
+      title2: "Transformation",
+      title3: "Digital",
+      description:
+        "Innovative solutions to create and optimize your online presence, taking your business into the digital future.",
+    },
+  };
+
+  const t = translations[language]; 
+
   return (
     <div
       className="body_titles"
@@ -8,13 +27,10 @@ function AnimatedTitles() {
       data-aos-anchor-placement="top-bottom"
       data-aos-duration="2000"
     >
-      <h1>Impulsa tu</h1>
-      <h1 className="h1_reconversion">Transformación</h1>
-      <h1 className="gradient-title">Digital</h1>
-      <p>
-        Soluciones innovadoras para crear y optimizar tu presencia online,
-        llevando tu negocio al futuro digital.
-      </p>
+      <h1>{t.title1}</h1>
+      <h1 className="h1_reconversion">{t.title2}</h1>
+      <h1 className="gradient-title">{t.title3}</h1>
+      <p>{t.description}</p>
     </div>
   );
 }

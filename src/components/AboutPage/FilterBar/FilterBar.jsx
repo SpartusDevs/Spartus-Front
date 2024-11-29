@@ -10,7 +10,7 @@ import springIcon from "../../../assets/tecnologiesIcons/spring.svg";
 import vueIcon from "../../../assets/tecnologiesIcons/vue.svg";
 import "./FilterBar.css";
 
-function FilterBar() {
+function FilterBar({ language }) {
   const [selectedArchitecture, setSelectedArchitecture] = useState("monolitica");
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1250);
 
@@ -63,18 +63,44 @@ function FilterBar() {
     };
   }, []);
 
+  // Traducciones
+  const translations = {
+    es: {
+      nameFilter: "Por nombre",
+      themeFilter: "Por temática",
+      technologyFilter: "Por tecnología",
+      yearFilter: "Por año",
+      architectureFilter: "Arquitectura",
+      monolithic: "Monolítica",
+      microservice: "Microservicio",
+      selectTechPlaceholder: "Selecciona una tecnología",
+    },
+    en: {
+      nameFilter: "By name",
+      themeFilter: "By theme",
+      technologyFilter: "By technology",
+      yearFilter: "By year",
+      architectureFilter: "Architecture",
+      monolithic: "Monolithic",
+      microservice: "Microservice",
+      selectTechPlaceholder: "Select a technology",
+    },
+  };
+
+  const t = translations[language]; // Selecciona las traducciones según el idioma
+
   return (
     <div className="leftBar_filterProyects">
       {/* Siempre se muestran los filtros de Por nombre y Por temática */}
       <div>
-        <h4 className="h4_filterProyects">Por nombre</h4>
-        <Input className="inputNombre_filterProyects" placeholder="Por nombre" />
+        <h4 className="h4_filterProyects">{t.nameFilter}</h4>
+        <Input className="inputNombre_filterProyects" placeholder={t.nameFilter} />
       </div>
       <div>
-        <h4 className="h4_filterProyects">Por temática</h4>
+        <h4 className="h4_filterProyects">{t.themeFilter}</h4>
         <Select
           className="inputNombre_filterProyects"
-          placeholder="Selecciona una tecnología"
+          placeholder={t.selectTechPlaceholder}
           options={technologyOptions}
           style={{ width: "12rem" }}
         />
@@ -84,34 +110,34 @@ function FilterBar() {
       {!isSmallScreen && (
         <>
           <div>
-            <h4 className="h4_filterProyects">Por año</h4>
+            <h4 className="h4_filterProyects">{t.yearFilter}</h4>
             <DatePicker className="inputNombre_filterProyects" picker="year" />
           </div>
           <div>
-            <h4 className="h4_filterProyects">Por tecnología</h4>
+            <h4 className="h4_filterProyects">{t.technologyFilter}</h4>
             <Select
               className="inputNombre_filterProyects"
-              placeholder="Selecciona una tecnología"
+              placeholder={t.selectTechPlaceholder}
               options={technologyOptions}
               style={{ width: "12rem" }}
             />
           </div>
           <div>
-            <h4 className="h4_filterProyects">Arquitectura</h4>
+            <h4 className="h4_filterProyects">{t.architectureFilter}</h4>
             <div className="arquiButons_filterProyects">
               <Button
                 type={selectedArchitecture === "monolitica" ? "primary" : "default"}
                 onClick={() => handleArchitectureClick("monolitica")}
                 ghost
               >
-                Monolítica
+                {t.monolithic}
               </Button>
               <Button
                 type={selectedArchitecture === "microservicio" ? "primary" : "default"}
                 onClick={() => handleArchitectureClick("microservicio")}
                 ghost
               >
-                Microservicio
+                {t.microservice}
               </Button>
             </div>
           </div>

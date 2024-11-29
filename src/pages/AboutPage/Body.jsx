@@ -7,18 +7,18 @@ import ViewProyectDetail from "../../components/AboutPage/ViewProyectDetail/View
 import GlassMenuBar from "../../components/comun/GlassMenuBar/GlassMenuBar";
 import "./styles/Body.css";
 
-function Body() {
+function Body({ language }) {
   const [isProyectOpen, setIsProyectOpen] = useState(false);
 
   return (
     <div className="body_container">
-      {!isProyectOpen && <AboutProyectTittles />}
+      {!isProyectOpen && <AboutProyectTittles language={language} />}
 
       <LeftBar
         isProyectOpen={isProyectOpen}
         setIsProyectOpen={setIsProyectOpen}
       />
-      {!isProyectOpen && <FilterBar />}
+      {!isProyectOpen && <FilterBar language={language} />}
       {!isProyectOpen ? (
         <div className="container_proyects">
           {[...Array(12)].map((_, index) => (
@@ -27,15 +27,23 @@ function Body() {
               onOpen={() => {
                 setIsProyectOpen(true);
               }}
+              language={language}
             />
           ))}
         </div>
       ) : (
         <div className="proyect_open">
-          <ViewProyectDetail setIsProyectOpen={setIsProyectOpen} />
+          <ViewProyectDetail
+            language={language}
+            setIsProyectOpen={setIsProyectOpen}
+          />
         </div>
       )}
-      <GlassMenuBar data-aos="flip-up" data-aos-duration="3000" />
+      <GlassMenuBar
+        language={language}
+        data-aos="flip-up"
+        data-aos-duration="3000"
+      />
     </div>
   );
 }
