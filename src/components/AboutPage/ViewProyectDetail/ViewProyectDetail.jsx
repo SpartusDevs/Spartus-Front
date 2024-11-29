@@ -8,29 +8,47 @@ import reactIcon from '../../../assets/tecnologiesIcons/react.svg';
 import springIcon from '../../../assets/tecnologiesIcons/spring.svg';
 import vueIcon from '../../../assets/tecnologiesIcons/vue.svg';
 import "./ViewProyectDetail.css";
-function ViewProyectDetail({proyect}) {
+
+function ViewProyectDetail({ proyect, language }) {
+  const translations = {
+    en: {
+      projectName: "Project Name",
+      architecture: "Architecture",
+      monolithic: "Monolithic",
+      technologies: "Technologies",
+    },
+    es: {
+      projectName: "Nombre del Proyecto",
+      architecture: "Arquitectura",
+      monolithic: "Monolítica",
+      technologies: "Tecnologías",
+    }
+  };
+
+  const { projectName, architecture, monolithic, technologies } = translations[language];
+
   return (
-    <div className="container_viewProyect" >
+    <div className="container_viewProyect">
       <div className="header_viewProyect">
         <div className="description_viewProyect">
-          <h1 className="h1_viewProyect">Nombre del Proyecto</h1>
-          <p className="p_viewProyect">Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam unde, optio asperiores odio rem laborum ab! Corporis illum provident incidunt. sit amet consectetur adipisicing elit. Officia, blanditiis.</p>
-          <p className="p_viewProyect">Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam unde, optio asperiores odio rem laborum ab! Corporis illum provident incidunt. sit amet consectetur adipisicing elit. Officia, blanditiis.</p>
+          <h1 className="h1_viewProyect">{projectName}</h1>
+          <p className="p_viewProyect">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam unde, optio asperiores odio rem laborum ab! Corporis illum provident incidunt.</p>
+          <p className="p_viewProyect">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam unde, optio asperiores odio rem laborum ab! Corporis illum provident incidunt.</p>
         </div>
-            <img className="image_viewProyect"  src="https://www.4webs.es/blog/wp-content/uploads/2019/02/urls-que-es.jpg" />
+        <img className="image_viewProyect" src="https://www.4webs.es/blog/wp-content/uploads/2019/02/urls-que-es.jpg" />
       </div>
       <div>
-      <h2 className="h2_viewProyect">Arquitectura</h2>
-      <Button color="primary" variant="outlined" className="button_viewProyect"  ghost>
-            Monolitica
-          </Button>
-      <p className="p_viewProyect">Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam unde, optio asperiores odio rem laborum ab! Corporis illum provident incidunt. sit amet consectetur adipisicing elit. Officia, blanditiis.</p>
+        <h2 className="h2_viewProyect">{architecture}</h2>
+        <Button color="primary" variant="outlined" className="button_viewProyect" ghost>
+          {monolithic}
+        </Button>
+        <p className="p_viewProyect">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam unde, optio asperiores odio rem laborum ab! Corporis illum provident incidunt.</p>
       </div>
-      <div >
-      <h2 className="h2_viewProyect">Tecnologías</h2>
-      <img src={androidIcon} className="icon_viewProyect" style={{marginLeft:'25px'}}/>
-      <img src={awsIcon} className="icon_viewProyect"/>
-      <img src={springIcon} className="icon_viewProyect"/>
+      <div>
+        <h2 className="h2_viewProyect">{technologies}</h2>
+        <img src={androidIcon} className="icon_viewProyect" style={{ marginLeft: '25px' }} />
+        <img src={awsIcon} className="icon_viewProyect" />
+        <img src={springIcon} className="icon_viewProyect" />
       </div>
     </div>
   );
