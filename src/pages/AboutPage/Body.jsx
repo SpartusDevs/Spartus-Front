@@ -5,8 +5,9 @@ import FilterBar from "../../components/AboutPage/FilterBar/FilterBar.jsx";
 import LeftBar from "../../components/AboutPage/LeftBar/LeftBar";
 import ViewProyectDetail from "../../components/AboutPage/ViewProyectDetail/ViewProyectDetail";
 import GlassMenuBar from "../../components/comun/GlassMenuBar/GlassMenuBar";
+import filterBarTranslations from "./translations/FilterBar.json"
+import viewProyectDetailTranslations from "./translations/ViewProyectDetail.json" 
 import "./styles/Body.css";
-
 function Body({ language }) {
   const [isProyectOpen, setIsProyectOpen] = useState(false);
 
@@ -18,7 +19,7 @@ function Body({ language }) {
         isProyectOpen={isProyectOpen}
         setIsProyectOpen={setIsProyectOpen}
       />
-      {!isProyectOpen && <FilterBar language={language} />}
+      {!isProyectOpen && <FilterBar language={language} translations={filterBarTranslations}/>}
       {!isProyectOpen ? (
         <div className="container_proyects">
           {[...Array(12)].map((_, index) => (
@@ -36,6 +37,7 @@ function Body({ language }) {
           <ViewProyectDetail
             language={language}
             setIsProyectOpen={setIsProyectOpen}
+            translations={viewProyectDetailTranslations}
           />
         </div>
       )}

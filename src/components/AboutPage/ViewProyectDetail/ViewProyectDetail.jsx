@@ -9,21 +9,7 @@ import springIcon from '../../../assets/tecnologiesIcons/spring.svg';
 import vueIcon from '../../../assets/tecnologiesIcons/vue.svg';
 import "./ViewProyectDetail.css";
 
-function ViewProyectDetail({ proyect, language }) {
-  const translations = {
-    en: {
-      projectName: "Project Name",
-      architecture: "Architecture",
-      monolithic: "Monolithic",
-      technologies: "Technologies",
-    },
-    es: {
-      projectName: "Nombre del Proyecto",
-      architecture: "Arquitectura",
-      monolithic: "Monolítica",
-      technologies: "Tecnologías",
-    }
-  };
+function ViewProyectDetail({ proyect, language, translations }) {
 
   const { projectName, architecture, monolithic, technologies } = translations[language];
 

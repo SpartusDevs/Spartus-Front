@@ -1,0 +1,15 @@
+{
+    "en": {
+      "projectName": "Project Name",
+      "architecture": "Architecture",
+      "monolithic": "Monolithic",
+      "technologies": "Technologies"
+    },
+    "es": {
+      "projectName": "Nombre del Proyecto",
+      "architecture": "Arquitectura",
+      "monolithic": "Monolítica",
+      "technologies": "Tecnologías"
+    }
+  }
+  

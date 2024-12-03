@@ -5,21 +5,12 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "antd";
 import MenuBar from "../../components/comun/MenuBar/MenuBar";
 import ImageRibbon from "../../components/LandingPage/ImageRibbon/ImageRibbon";
+import translations from "./translations/Header.json"; 
 import "./styles/Header.css";
-
-function Header({language, toggleLanguage}) {
+function Header({ language, toggleLanguage }) {
   const [updateImageLogo, setUpdateImageLogo] = useState(logo);
   const [flag, setFlag] = useState(false);
   const navigate = useNavigate();
-
-  const translations = {
-    es: {
-      projects: "Nuestros proyectos",
-    },
-    en: {
-      projects: "Our Projects",
-    },
-  };
 
   const t = translations[language]; 
 

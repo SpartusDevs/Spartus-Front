@@ -1,0 +1,23 @@
+{
+    "es": {
+      "nameFilter": "Por nombre",
+      "themeFilter": "Por temática",
+      "technologyFilter": "Por tecnología",
+      "yearFilter": "Por año",
+      "architectureFilter": "Arquitectura",
+      "monolithic": "Monolítica",
+      "microservice": "Microservicio",
+      "selectTechPlaceholder": "Selecciona una tecnología"
+    },
+    "en": {
+      "nameFilter": "By name",
+      "themeFilter": "By theme",
+      "technologyFilter": "By technology",
+      "yearFilter": "By year",
+      "architectureFilter": "Architecture",
+      "monolithic": "Monolithic",
+      "microservice": "Microservice",
+      "selectTechPlaceholder": "Select a technology"
+    }
+  }
+  

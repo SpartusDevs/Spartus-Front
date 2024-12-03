@@ -10,7 +10,7 @@ import springIcon from "../../../assets/tecnologiesIcons/spring.svg";
 import vueIcon from "../../../assets/tecnologiesIcons/vue.svg";
 import "./FilterBar.css";
 
-function FilterBar({ language }) {
+function FilterBar({ language, translations }) {
   const [selectedArchitecture, setSelectedArchitecture] = useState("monolitica");
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1250);
 
@@ -63,29 +63,6 @@ function FilterBar({ language }) {
     };
   }, []);
 
-  // Traducciones
-  const translations = {
-    es: {
-      nameFilter: "Por nombre",
-      themeFilter: "Por temática",
-      technologyFilter: "Por tecnología",
-      yearFilter: "Por año",
-      architectureFilter: "Arquitectura",
-      monolithic: "Monolítica",
-      microservice: "Microservicio",
-      selectTechPlaceholder: "Selecciona una tecnología",
-    },
-    en: {
-      nameFilter: "By name",
-      themeFilter: "By theme",
-      technologyFilter: "By technology",
-      yearFilter: "By year",
-      architectureFilter: "Architecture",
-      monolithic: "Monolithic",
-      microservice: "Microservice",
-      selectTechPlaceholder: "Select a technology",
-    },
-  };
 
   const t = translations[language]; // Selecciona las traducciones según el idioma
 

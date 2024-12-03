@@ -1,21 +1,9 @@
 import { FacebookOutlined, TwitterOutlined, LinkedinOutlined } from "@ant-design/icons";
 import "./styles/Footer.css";
-
+import translations from "./translations/Footer.json";
 function Footer({ language }) {
+  const t = translations[language];
 
-  // Traducciones
-  const translations = {
-    es: {
-      email: "Email: contacto@tupagina.com",
-      phone: "Teléfono: +123 456 789",
-    },
-    en: {
-      email: "Email: contact@yourpage.com",
-      phone: "Phone: +123 456 789",
-    },
-  };
-
-  const t = translations[language]; 
   return (
     <footer className="footer">
       <div className="footer-content">
