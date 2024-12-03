@@ -1,4 +1,3 @@
-import React from "react";
 import logoSpartusGray from "../../assets/logo/smalLogo2 (2).png"; // Importa la imagen
 import "./Loading.css"; 
 
