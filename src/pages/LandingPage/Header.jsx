@@ -4,7 +4,7 @@ import logo2 from "../../assets/logo/1-removebg-preview.png";
 import { useNavigate } from "react-router-dom";
 import { Button } from "antd";
 import MenuBar from "../../components/comun/MenuBar/MenuBar";
-import ImageRibbon from "../../components/LandingPage/ImageRibbon/ImageRibbon";
+import ImageRibbon from "../../components/LandingPage";
 import translations from "./translations/Header.json"; 
 import "./styles/Header.css";
 function Header({ language, toggleLanguage }) {

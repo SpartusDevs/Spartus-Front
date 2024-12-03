@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { FcKindle, FcAcceptDatabase, FcGenealogy } from "react-icons/fc";
 import GlassMenuBar from "../../components/comun/GlassMenuBar/GlassMenuBar";
 import { GrayItemList, AnimatedTitles, FeatureCards, MiddleTitles, AboutUs } from "../../components/LandingPage"; 

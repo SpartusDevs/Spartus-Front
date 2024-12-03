@@ -1,6 +1,6 @@
 import { FacebookOutlined, TwitterOutlined, LinkedinOutlined } from "@ant-design/icons";
-import "./styles/Footer.css";
 import translations from "./translations/Footer.json";
+import "./styles/Footer.css";
 function Footer({ language }) {
   const t = translations[language];
 
