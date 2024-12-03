@@ -1,0 +1,56 @@
+/* Contenedor principal de la página de carga */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Contenedor para la imagen y el spinner */
+.spinner-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animación para el logo que se agranda y achica */
+.logo {
+  width: 150px; /* Tamaño inicial */
+  height: auto;
+  position: absolute;
+  z-index: 2; /* Asegura que la imagen esté encima del spinner */
+  animation: zoomInOut 2s infinite;
+}
+
+/* Animación de agrandar y achicar el logo */
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1); /* Tamaño normal */
+  }
+  50% {
+    transform: scale(1.2); /* Agranda al 120% */
+  }
+  100% {
+    transform: scale(1); /* Vuelve al tamaño original */
+  }
+}
+
+.spinner {
+  border: 5px solid #ffffff43; /* Borde blanco */
+  border-top: 5px solid #54575987; /* Borde de color para la animación */
+  border-radius: 50%;
+  width: 220px; /* Tamaño del borde */
+  height: 220px; /* Tamaño del borde */
+  animation: spin 2s linear infinite;
+  position: absolute;
+  z-index: 1; /* Coloca el spinner detrás de la imagen */
+}
+
+/* Animación de rotación del spinner */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

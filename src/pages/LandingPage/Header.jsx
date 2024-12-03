@@ -4,7 +4,7 @@ import { Button } from "antd";
 import logoSpartusGray from "../../assets/logo/2-removebg-preview.png";
 import logoSpartusRed from "../../assets/logo/1-removebg-preview.png";
 import MenuBar from "../../components/comun/MenuBar/MenuBar";
-import ImageRibbon from "../../components/LandingPage";
+import ImageRibbon from "../../components/LandingPage/ImageRibbon/ImageRibbon.jsx";
 import translations from "./translations/Header.json"; 
 import "./styles/Header.css";
 function Header({ language, toggleLanguage }) {
