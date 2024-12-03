@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react";
 import { FcKindle, FcAcceptDatabase, FcGenealogy } from "react-icons/fc";
 import GlassMenuBar from "../../components/comun/GlassMenuBar/GlassMenuBar";
-import GrayItemList from "../../components/LandingPage/GrayItemList/GrayItemList";
-import AnimatedTitles from "../../components/LandingPage/AnimatedTitles/AnimatedTitles";
-import FeatureCards from "../../components/LandingPage/FeatureCards/FeatureCards";
-import MiddleTitles from "../../components/LandingPage/MiddleTitles/MiddleTitles";
-import AboutUs from "../../components/LandingPage/AboutUs/AboutUs";
+import { GrayItemList, AnimatedTitles, FeatureCards, MiddleTitles, AboutUs } from "../../components/LandingPage"; 
 import translations from "./translations/Body.json";
 import "./styles/Body.css";
 

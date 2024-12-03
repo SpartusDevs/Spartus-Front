@@ -1,7 +1,6 @@
 import { useEffect } from "react";
-import Body from './Body';
 import { useLanguage } from "../../contexts/LanguageContext"; 
-
+import Body from './Body';
 
 function ProyectsPage() {
   const { language } = useLanguage(); 

@@ -1,9 +1,5 @@
 import { useState } from "react";
-import AboutProyectTittles from "../../components/AboutPage/AboutProyectTittles/AboutProyectTittles";
-import ProyectsPreview from "../../components/AboutPage/ProyectsPreview/ProyectsPreview";
-import FilterBar from "../../components/AboutPage/FilterBar/FilterBar.jsx";
-import LeftBar from "../../components/AboutPage/LeftBar/LeftBar";
-import ViewProyectDetail from "../../components/AboutPage/ViewProyectDetail/ViewProyectDetail";
+import { AboutProyectTittles, ProyectsPreview, FilterBar, LeftBar, ViewProyectDetail } from "../../components/AboutPage";
 import GlassMenuBar from "../../components/comun/GlassMenuBar/GlassMenuBar";
 import filterBarTranslations from "./translations/FilterBar.json"
 import viewProyectDetailTranslations from "./translations/ViewProyectDetail.json" 
