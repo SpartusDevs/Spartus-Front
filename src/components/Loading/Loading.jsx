@@ -5,7 +5,6 @@ function Loading() {
   return (
     <div className="loading-container">
       <div className="spinner-container">
-        <div className="spinner"></div>
         <img src={logoSpartusGray} alt="Loading Logo" className="logo" />
       </div>
     </div>
