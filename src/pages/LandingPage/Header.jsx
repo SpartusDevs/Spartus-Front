@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
-import logo from "../../assets/logo/2-removebg-preview.png";
-import logo2 from "../../assets/logo/1-removebg-preview.png";
 import { useNavigate } from "react-router-dom";
 import { Button } from "antd";
+import logoSpartusGray from "../../assets/logo/2-removebg-preview.png";
+import logoSpartusRed from "../../assets/logo/1-removebg-preview.png";
 import MenuBar from "../../components/comun/MenuBar/MenuBar";
 import ImageRibbon from "../../components/LandingPage";
 import translations from "./translations/Header.json"; 
 import "./styles/Header.css";
 function Header({ language, toggleLanguage }) {
-  const [updateImageLogo, setUpdateImageLogo] = useState(logo);
+  const [updateImageLogo, setUpdateImageLogo] = useState(logoSpartusGray);
   const [flag, setFlag] = useState(false);
   const navigate = useNavigate();
 
@@ -16,7 +16,7 @@ function Header({ language, toggleLanguage }) {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setUpdateImageLogo(logo2);
+      setUpdateImageLogo(logoSpartusRed);
       setFlag(true);
     }, 2000);
 
