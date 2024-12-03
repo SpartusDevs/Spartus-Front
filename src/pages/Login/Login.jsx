@@ -18,7 +18,8 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false); // Estado para mostrar u ocultar contraseña
 
   const handleLoginSubmit = (e) => {
-    e.preventDefault();
+   // e.preventDefault();
+    navigate("/dashboard");
     console.log('Login submitted:', { email, password, rememberMe });
   };
 
