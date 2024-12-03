@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from "../../contexts/LanguageContext"; 
 import { Checkbox, Button, Form, Input } from 'antd';
+import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 
 import './Login.css';
 
@@ -12,6 +13,9 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
   const [isRegistering, setIsRegistering] = useState(false);
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [showPassword, setShowPassword] = useState(false); // Estado para mostrar u ocultar contraseña
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
@@ -20,24 +24,51 @@ const Login = () => {
 
   const handleRegisterSubmit = (e) => {
     e.preventDefault();
-    console.log('Register submitted:', { email, password });
+    console.log('Register submitted:', { firstName, lastName, email, password });
   };
 
   const handleNavigateToMain = () => {
     navigate("/");
   };
 
- const handleChangeLanguaje = ()=>{
-  toggleLanguage(language === 'es' ? 'en' : 'es')
- } 
+  const handleChangeLanguage = () => {
+    toggleLanguage(language === 'es' ? 'en' : 'es');
+  };
 
   return (
     <div className="login-wrapper">
-      <div className="login-container">   <Button className="language-toggle" onClick={handleChangeLanguaje} ghost>
-        {language === 'es' ? 'ES' : 'EN'}
-      </Button>
+      <div className="login-container">
+        <Button className="language-toggle" onClick={handleChangeLanguage} ghost>
+          {language === 'es' ? 'ES' : 'EN'}
+        </Button>
         <div className="avatar" onClick={handleNavigateToMain}></div>
         <Form onFinish={isRegistering ? handleRegisterSubmit : handleLoginSubmit}>
+          {isRegistering && (
+            <>
+              <div className="input-group">
+                <div className="label">
+                  {language === 'es' ? 'Nombre' : 'First Name'}
+                </div>
+                <Input
+                  type="text"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="input-group">
+                <div className="label">
+                  {language === 'es' ? 'Apellido' : 'Last Name'}
+                </div>
+                <Input
+                  type="text"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                  required
+                />
+              </div>
+            </>
+          )}
           <div className="input-group">
             <div className="label">
               {language === 'es' ? 'Correo Electrónico' : 'Email'}
@@ -53,11 +84,15 @@ const Login = () => {
             <div className="label">
               {language === 'es' ? 'Contraseña' : 'Password'}
             </div>
-            <Input
-              type="password"
+            <Input.Password
+            className='input_password'
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+              iconRender={(visible) => 
+                visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
+              }
+              visibilityToggle
             />
           </div>
           {!isRegistering && (
