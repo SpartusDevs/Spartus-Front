@@ -13,7 +13,7 @@ import {
   } from "@ant-design/icons";
   import { HiOutlinePaintBrush } from "react-icons/hi2";
 
-import companyImg from "../../assets/logo/smalLogo.png";
+import companyImg from "../../assets/logo/smalLogo.webp";
 import userImg from "../../assets/developers/yo.jpg";
 import "./Dashboard.css";
 

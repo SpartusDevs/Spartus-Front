@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;  
+    min-height: 100vh;  
    /* background: linear-gradient(135deg, #06071B, #024f7f); ]*/
    background: linear-gradient(135deg, #06071B, #06071B, #050b7c,#050b7c, #06071B, #ae3915ac, #06071B, #06071B); 
 }
@@ -13,19 +13,19 @@
     background: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     padding: 30px;
-    width: 500px;
+    width: 461px;
     text-align: center;
     backdrop-filter: blur(5px);
   }
   
   .avatar {
-    background-image: url('../../assets//logo/2-removebg-preview.png');
+    background-image: url('../../assets//logo/2-removebg-preview.webp');
     background-size: cover;
     object-fit: cover;
     border-radius: 50%;
     width: 260px;
     height: 260px;
-    margin: 0 auto 20px;
+    margin: 0 auto;
   }
   
   /* Input Styling */
@@ -40,7 +40,9 @@
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-  .input-group label {
+  .label {
+    width: 100%;
+    text-align: start;
    color: gray;
   }
   /* Remember Me Checkbox */

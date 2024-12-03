@@ -1,4 +1,4 @@
-import logoSpartusGray from "../../assets/logo/smalLogo2 (2).png";
+import logoSpartusGray from "../../assets/logo/smalLogo2-_2_.webp";
 import loadingText from "../../assets/loagingText.png"
 import "./Loading.css"; 
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo2 from "../../../assets/logo/1-removebg-preview.png";
+import logo2 from "../../../assets/logo/1-removebg-preview.webp";
 import "./AboutProyectTittles.css";
 
 function AboutProyectTittles({ language }) {
