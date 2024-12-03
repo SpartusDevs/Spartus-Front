@@ -1,0 +1,19 @@
+{
+    "es": {
+      "home": "Inicio",
+      "projects": "Proyectos",
+      "aboutUs": "Nosotros",
+      "contact": "Contacto",
+      "services": "Servicios",
+      "languageLabel": "ES"
+    },
+    "en": {
+      "home": "Home",
+      "projects": "Projects",
+      "aboutUs": "About Us",
+      "contact": "Contact",
+      "services": "Services",
+      "languageLabel": "EN"
+    }
+  }
+  

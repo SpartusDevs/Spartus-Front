@@ -6,6 +6,7 @@ import logoSpartusRed from "../../assets/logo/1-removebg-preview.png";
 import MenuBar from "../../components/comun/MenuBar/MenuBar";
 import ImageRibbon from "../../components/LandingPage/ImageRibbon/ImageRibbon.jsx";
 import translations from "./translations/Header.json"; 
+import menuBarTraslations from "./translations/MenuBar.json";
 import "./styles/Header.css";
 function Header({ language, toggleLanguage }) {
   const [updateImageLogo, setUpdateImageLogo] = useState(logoSpartusGray);
@@ -30,7 +31,7 @@ function Header({ language, toggleLanguage }) {
   return (
     <>
       <header className="header">
-        <MenuBar language={language} toggleLanguage={toggleLanguage} />
+        <MenuBar language={language} toggleLanguage={toggleLanguage} translations={menuBarTraslations} />
       </header>
       <main className="container">
         <div className="box box-1">

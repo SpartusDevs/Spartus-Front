@@ -2,27 +2,10 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./MenuBar.css";
 
-function MenuBar({ language, toggleLanguage }) {
+function MenuBar({ language, toggleLanguage, translations }) {
   const [selectedItem, setSelectedItem] = useState(language === "es" ? "Inicio" : "Home");
   const navigate = useNavigate();
-
-  // Traducciones
-  const translations = {
-    es: {
-      home: "Inicio",
-      projects: "Proyectos",
-      aboutUs: "Nosotros",
-      languageLabel: "ES",
-    },
-    en: {
-      home: "Home",
-      projects: "Projects",
-      aboutUs: "About Us",
-      languageLabel: "EN",
-    },
-  };
-
-  const t = translations[language]; // Selecciona las traducciones según el idioma
+  const t = translations[language]; 
 
   const handleScroll = () => {
     const isAtBottom =
@@ -39,7 +22,7 @@ function MenuBar({ language, toggleLanguage }) {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [selectedItem, t]); // Dependencia actualizada para reflejar cambios en las traducciones
+  }, [selectedItem, t]); 
 
   const handleSelect = (item) => {
     if (item !== t.languageLabel) {
@@ -49,7 +32,6 @@ function MenuBar({ language, toggleLanguage }) {
       } else if (item === t.projects) {
         navigate("/about");
       } else if (item === t.aboutUs) {
-        // Desplazarse al final de la página
         window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
       }
     }

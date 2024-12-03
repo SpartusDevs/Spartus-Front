@@ -1,7 +1,6 @@
-import React from 'react';
 import { Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import spartusGraylogo from "../../assets/logo/2-removebg-preview.png"; // Ruta a la imagen
+import spartusGraylogo from "../../assets/logo/2-removebg-preview.png";
 import "./ErrorPage.css";
 
 const ErrorPage = () => {
