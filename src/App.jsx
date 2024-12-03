@@ -5,6 +5,8 @@ import LandingPage from './pages/LandingPage/index';
 import ProyectsPage from './pages/AboutPage/index';
 import Dashboard from './pages/DashBoard/Dashboard';
 import Loading from './components/Loading/Loading';
+import ErrorPage from './components/ErrorPage/ErrorPage';
+import Login from './pages/Login/Login';
 import 'aos/dist/aos.css'; 
 import './App.css';
 function App() {
@@ -29,12 +31,22 @@ function App() {
     { 
       path:"/dashboard",
       element: <Dashboard/>
+    },
+    { 
+      path:"/login",
+      element: <Login/>
+    }
+    ,
+    { 
+      path:"/*",
+      element: <ErrorPage/>
     }
   ]);
 
   return (
     <div>
-      {loading ? <Loading /> : <RouterProvider router={router} />} 
+      <RouterProvider router={router} />
+      {/*loading ? <Loading /> : <RouterProvider router={router} />¨*/} 
     </div>
   );
 }
