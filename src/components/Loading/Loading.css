@@ -9,6 +9,7 @@
 
 .spinner-container {
   position: relative;
+  top:-100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,6 +22,13 @@
   z-index: 2;
   animation: zoomInOut 2s infinite, shadowAnimation 2s infinite;
   filter: drop-shadow(0 0 15px rgba(0, 0, 255, 0.7)); /* Sombra azul inicial */
+}
+
+.logoText{
+  position: absolute;
+  width: 300px;
+  height: auto;
+  top:-5px;
 }
 
 @keyframes zoomInOut {
@@ -40,10 +48,10 @@
     filter: drop-shadow(0 0 15px rgba(255, 77, 0, 0.7)); /* Azul */
   }
   50% {
-    filter: drop-shadow(0 0 15px rgba(59, 58, 58, 0.7)); /* Blanco */
+    filter: drop-shadow(0 0 15px rgba(11, 97, 112, 0.7)); /* Blanco */
   }
   100% {
-    filter: drop-shadow(0 0 15px rgba(0, 153, 255, 0.7)); /* Azul */
+    filter: drop-shadow(0 0 7px rgba(89, 0, 255, 0.7)); /* Azul */
   }
 }
 
