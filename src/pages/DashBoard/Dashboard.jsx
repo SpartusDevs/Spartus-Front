@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState, useEffect } from "react";
 import { Input, Menu } from "antd";
 import {
   UserOutlined,
@@ -12,27 +12,34 @@ import {
   GithubOutlined
 } from "@ant-design/icons";
 import { HiOutlinePaintBrush } from "react-icons/hi2";
-
 import companyImg from "../../assets/logo/smalLogo.webp";
 import userImg from "../../assets/developers/yo.jpg";
 import CompleteRegistrationModal from "../../components/CompleteRegistrationModal/CompleteRegistrationModal";
 import { Clients, Dash, DesingModels, Finances, GitHubGestion, Projects, Settings, Team, ToWork } from "../../components/DashboardSelectedPage";
+import {fetchGitHubRepos} from "../../services/githubApi.js"
 import "./Dashboard.css";
 
 function Dashboard() {
-  // Estado para manejar el componente seleccionado
   const [selectedComponent, setSelectedComponent] = useState("dashboard");
+  const [repos, setRepos] = useState([]);
 
-  // Función para manejar el cambio de componente según la selección del menú
   const handleMenuClick = (e) => {
     setSelectedComponent(e.key);
   };
+  useEffect(() => {
+    const loadRepos = async () => {
+        const fetchedRepos = await fetchGitHubRepos();  
+        setRepos(fetchedRepos);
+       
+    };
+    loadRepos(); 
+  }, []); 
 
   return (
     <div className="container-dashboard">
       <Header />
       <Sidebar onMenuClick={handleMenuClick} />
-      <Body selectedComponent={selectedComponent} />
+      <Body selectedComponent={selectedComponent} repos={repos} />
     </div>
   );
 }
@@ -106,7 +113,7 @@ const Sidebar = ({ onMenuClick }) => {
   );
 };
 
-const Body = ({ selectedComponent }) => {
+const Body = ({ selectedComponent, repos }) => {
   const renderComponent = () => {
     switch (selectedComponent) {
       case "dashboard":
@@ -114,7 +121,7 @@ const Body = ({ selectedComponent }) => {
       case "projects":
         return <Projects />;
       case "github":
-        return <GitHubGestion />;
+        return <GitHubGestion repos={repos}/>;
       case "team":
         return <Team />;
       case "toWork":
