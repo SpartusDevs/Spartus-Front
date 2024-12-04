@@ -133,7 +133,7 @@ const Body = ({ selectedComponent }) => {
   };
 
   return (
-    <div style={{ width: "100%", height: "92vh", paddingLeft: "281px" }}>
+    <div style={{ width: "100%", height: "92vh", paddingLeft: "281px", color:'white' }}>
       {renderComponent()}
     </div>
   );
