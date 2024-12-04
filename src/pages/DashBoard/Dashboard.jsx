@@ -1,29 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Input, Menu } from "antd";
 import {
-    UserOutlined,
-    BellOutlined,
-    SettingOutlined,
-    HomeOutlined,
-    AppstoreAddOutlined,
-    FileAddOutlined, // Icono para 'To Work'
-    DollarOutlined,  
-    UsergroupAddOutlined,
-    GithubOutlined 
-  } from "@ant-design/icons";
-  import { HiOutlinePaintBrush } from "react-icons/hi2";
+  UserOutlined,
+  BellOutlined,
+  SettingOutlined,
+  HomeOutlined,
+  AppstoreAddOutlined,
+  FileAddOutlined, // Icono para 'To Work'
+  DollarOutlined,
+  UsergroupAddOutlined,
+  GithubOutlined
+} from "@ant-design/icons";
+import { HiOutlinePaintBrush } from "react-icons/hi2";
 
 import companyImg from "../../assets/logo/smalLogo.webp";
 import userImg from "../../assets/developers/yo.jpg";
 import CompleteRegistrationModal from "../../components/CompleteRegistrationModal/CompleteRegistrationModal";
+import { Clients, Dash, DesingModels, Finances, GitHubGestion, Projects, Settings, Team, ToWork } from "../../components/DashboardSelectedPage";
 import "./Dashboard.css";
 
 function Dashboard() {
+  // Estado para manejar el componente seleccionado
+  const [selectedComponent, setSelectedComponent] = useState("dashboard");
+
+  // Función para manejar el cambio de componente según la selección del menú
+  const handleMenuClick = (e) => {
+    setSelectedComponent(e.key);
+  };
+
   return (
     <div className="container-dashboard">
       <Header />
-      <Sidebar/>
-      <CompleteRegistrationModal/>
+      <Sidebar onMenuClick={handleMenuClick} />
+      <Body selectedComponent={selectedComponent} />
     </div>
   );
 }
@@ -34,7 +43,7 @@ const Header = () => {
   return (
     <div className="header-dashboard">
       <div className="company-dashboard">
-        <img src={companyImg} alt="Company Logo"  />
+        <img src={companyImg} alt="Company Logo" />
         <h2>SPARTUS Gestion</h2>
       </div>
 
@@ -55,50 +64,77 @@ const Header = () => {
   );
 };
 
+const Sidebar = ({ onMenuClick }) => {
+  return (
+    <div className="sidebar">
+      <Menu
+        theme="dark"
+        mode="inline"
+        defaultSelectedKeys={["1"]}
+        className="sidebar-menu"
+        onClick={onMenuClick} // Establece el manejador de clic
+      >
+        <Menu.Item key="dashboard" icon={<HomeOutlined />}>
+          Dashboard
+        </Menu.Item>
+        <Menu.Item key="projects" icon={<AppstoreAddOutlined />}>
+          Projects
+        </Menu.Item>
+        <Menu.Item key="github" icon={<GithubOutlined />}>
+          Git Hub Gestion
+        </Menu.Item>
+        <Menu.Item key="team" icon={<UserOutlined />}>
+          Team
+        </Menu.Item>
+        <Menu.Item key="toWork" icon={<FileAddOutlined />}>
+          To Work
+        </Menu.Item>
+        <Menu.Item key="clients" icon={<UsergroupAddOutlined />} >
+          Clients
+        </Menu.Item>
+        <Menu.Item key="finances" icon={<DollarOutlined />}>
+          Finances
+        </Menu.Item>
+        <Menu.Item key="designModels" icon={<HiOutlinePaintBrush />}>
+          Design Models
+        </Menu.Item>
+        <Menu.Item key="settings" icon={<SettingOutlined />}>
+          Settings
+        </Menu.Item>
+      </Menu>
+    </div>
+  );
+};
 
-const Sidebar = () => {
-    return (
-      <div className="sidebar">
-        <Menu
-          theme="dark"
-          mode="inline"
-          defaultSelectedKeys={["1"]}
-          className="sidebar-menu"
-        >
-          {/* Agregar Sección de Finanzas */}
-          <Menu.Item key="1" icon={<HomeOutlined />}>
-            Dashboard
-          </Menu.Item>
-          <Menu.Item key="2" icon={<AppstoreAddOutlined />}>
-            Projects
-          </Menu.Item>
-          <Menu.Item key="3" icon={<GithubOutlined />}>
-            Git Hub Gestion
-          </Menu.Item>
-
-          <Menu.Item key="4" icon={<UserOutlined />}>
-            Team
-          </Menu.Item>
-          
-          {/* Proyecto por hacer */}
-          <Menu.Item key="5" icon={<FileAddOutlined />}>
-            To Work
-          </Menu.Item>
-  
-           <Menu.Item key="6" icon={<UsergroupAddOutlined  />}>
-           Clients
-          </Menu.Item>
-          <Menu.Item key="7" icon={<DollarOutlined />}>
-            Finances
-          </Menu.Item>
-          <Menu.Item key="8" icon={<HiOutlinePaintBrush />}>
-            Desing Models
-          </Menu.Item>
-          <Menu.Item key="9" icon={<SettingOutlined />}>
-            Settings
-          </Menu.Item>
-      
-        </Menu>
-      </div>
-    );
+const Body = ({ selectedComponent }) => {
+  const renderComponent = () => {
+    switch (selectedComponent) {
+      case "dashboard":
+        return <Dash />;
+      case "projects":
+        return <Projects />;
+      case "github":
+        return <GitHubGestion />;
+      case "team":
+        return <Team />;
+      case "toWork":
+        return <ToWork />;
+      case "clients":
+        return <Clients />;
+      case "finances":
+        return <Finances />;
+      case "designModels":
+        return <DesingModels />;
+      case "settings":
+        return <Settings />;
+      default:
+        return <Dash />; // Por defecto, muestra el componente Dashboard
+    }
   };
+
+  return (
+    <div style={{ width: "100%", height: "92vh", paddingLeft: "281px" }}>
+      {renderComponent()}
+    </div>
+  );
+};
