@@ -15,7 +15,7 @@ const Login = () => {
   const [isRegistering, setIsRegistering] = useState(false);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
-  const [showPassword, setShowPassword] = useState(false); // Estado para mostrar u ocultar contraseña
+  const [showPassword, setShowPassword] = useState(false); 
 
   const handleLoginSubmit = (e) => {
    // e.preventDefault();

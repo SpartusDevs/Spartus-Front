@@ -15,6 +15,7 @@ import {
 
 import companyImg from "../../assets/logo/smalLogo.webp";
 import userImg from "../../assets/developers/yo.jpg";
+import CompleteRegistrationModal from "../../components/CompleteRegistrationModal/CompleteRegistrationModal";
 import "./Dashboard.css";
 
 function Dashboard() {
@@ -22,6 +23,7 @@ function Dashboard() {
     <div className="container-dashboard">
       <Header />
       <Sidebar/>
+      <CompleteRegistrationModal/>
     </div>
   );
 }
