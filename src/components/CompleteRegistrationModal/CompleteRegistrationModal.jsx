@@ -2,9 +2,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Modal, Button, DatePicker, Select, Upload, Input, message } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
-import { handleImageUpload } from "../../utils/imageUtils"; // Importa la función
+import { handleImageUpload } from "../../utils/imageUtils"; 
 import allCountries from "../../assets/json/countries.json";
-import "./CompleteRegistrationModal.css"; // Importa los estilos
+import "./CompleteRegistrationModal.css";
 
 const { Option } = Select;
 
@@ -15,7 +15,7 @@ function CompleteRegistrationModal() {
     birthDate: null,
     country: "",
     phone: "",
-    countryCode: "+54", // Prefijo de Argentina por defecto
+    countryCode: "+54", 
   });
   const navigate = useNavigate();
   const [imagePreview, setImagePreview] = useState(
