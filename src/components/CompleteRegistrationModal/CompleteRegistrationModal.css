@@ -1,32 +1,66 @@
-.register-steps .form-group {
-    margin-bottom: 16px;
-  }
-  
-  .register-steps label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
-  }
-  
-  .image-upload-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 16px;
-  }
-  
-  .image-preview {
-    margin-bottom: 16px;
-    width: 150px;
-    height: 150px;
-  }
-  
-  .image-preview img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%; /* Hace la imagen redondeada */
-    object-fit: cover; /* Asegura que la imagen se recorte adecuadamente */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  
+.register-steps_complReg .form-group_complReg {
+  margin-bottom: 16px;
+}
+
+.register-steps_complReg label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.image-upload-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.image-preview {
+  margin-bottom: 16px;
+  width: 150px;
+  height: 150px;
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* Hace la imagen redondeada */
+  object-fit: cover; /* Asegura que la imagen se recorte adecuadamente */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.upload-button {
+  background-color: #031f59;
+  border-color: #031f59;
+  color: white;
+  font-weight: bold;
+}
+
+.input-date_complReg, .input-select_complReg, .input-phone_complReg {
+  width: 100%;
+}
+
+.phone-input-container_complReg {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.flag-icon {
+  width: 20px;
+  margin-right: 8px;
+}
+
+.submit-button_complReg {
+  background-color:  #031f59;
+  border-color:  #031f59;
+}
+
+.submit-button_complReg:hover, .upload-button:hover { 
+  background-color:  #053490!important;
+  color:white !important;
+}
+
+.input-phone_complReg{
+  width: 230%;
+}

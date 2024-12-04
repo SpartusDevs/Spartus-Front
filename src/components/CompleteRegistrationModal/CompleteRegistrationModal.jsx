@@ -2,9 +2,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Modal, Button, DatePicker, Select, Upload, Input, message } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
-import { handleImageUpload } from "../../utils/imageUtils"; // Importa la función desde el archivo utils
+import { handleImageUpload } from "../../utils/imageUtils"; // Importa la función
 import allCountries from "../../assets/json/countries.json";
-import "./CompleteRegistrationModal.css";
+import "./CompleteRegistrationModal.css"; // Importa los estilos
 
 const { Option } = Select;
 
@@ -15,7 +15,7 @@ function CompleteRegistrationModal() {
     birthDate: null,
     country: "",
     phone: "",
-    countryCode: "+54", 
+    countryCode: "+54", // Prefijo de Argentina por defecto
   });
   const navigate = useNavigate();
   const [imagePreview, setImagePreview] = useState(
@@ -78,32 +78,28 @@ function CompleteRegistrationModal() {
         <Button
           key="submit"
           type="primary"
-          style={{ backgroundColor: "#003366", borderColor: "#003366" }}
+          className="submit-button_complReg"
           onClick={handleSubmit}
         >
           Guardar
         </Button>,
       ]}
     >
-      <div className="register-steps">
+      <div className="register-steps_complReg">
         {/* Cargar imagen */}
-        <div className="form-group image-upload-group">
+        <div className="form-group_complReg image-upload-group">
           <div className="image-preview">
             <img src={imagePreview} alt="Preview" />
           </div>
           <Upload
             beforeUpload={() => false}
-            onChange={({ file }) => handleImageUpload(file, setImagePreview, setFormData, formData)} // Usa la función importada
+            onChange={(info) => handleImageUpload(info, setImagePreview, setFormData)} // Usa la función importada
             maxCount={1}
             showUploadList={false}
           >
             <Button
               icon={<UploadOutlined />}
-              style={{
-                backgroundColor: "#003366",
-                color: "#fff",
-                borderColor: "#003366",
-              }}
+              className="upload-button"
             >
               Seleccionar Imagen
             </Button>
@@ -111,20 +107,20 @@ function CompleteRegistrationModal() {
         </div>
 
         {/* Fecha de nacimiento */}
-        <div className="form-group">
-          <label style={{ color: "#003366" }}>Fecha de Nacimiento:</label>
+        <div className="form-group_complReg">
+          <label>Fecha de Nacimiento:</label>
           <DatePicker
-            style={{ width: "100%" }}
+            className="input-date_complReg"
             onChange={handleDateChange}
             placeholder="Seleccionar fecha"
           />
         </div>
 
         {/* País */}
-        <div className="form-group">
-          <label style={{ color: "#003366" }}>País:</label>
+        <div className="form-group_complReg">
+          <label>País:</label>
           <Select
-            style={{ width: "100%" }}
+            className="input-select_complReg"
             onChange={handleCountryChange}
             placeholder="Seleccionar país"
           >
@@ -133,7 +129,7 @@ function CompleteRegistrationModal() {
                 <img
                   src={country.flag}
                   alt={country.name}
-                  style={{ width: 20, height: 15, marginRight: 10 }}
+                  className="flag-icon"
                 />
                 {country.name}
               </Option>
@@ -142,41 +138,39 @@ function CompleteRegistrationModal() {
         </div>
 
         {/* Número de teléfono */}
-        <div className="form-group">
-          <label style={{ color: "#003366" }}>Número de Teléfono:</label>
-          <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
-            {/* Selección del código de país */}
+        <div className="form-group_complReg">
+          <label>Número de Teléfono:</label>
+          <div className="phone-input-container_complReg">
             <Select
               value={formData.countryCode}
               onChange={(value) =>
                 setFormData({ ...formData, countryCode: value })
               }
-              style={{ width: "30%" }}
+              className="input-select_complReg"
               placeholder="Código"
             >
               {allCountries.map((country) => (
-                <Option key={country.code} value={country.dialCode}>
-                  <img
-                    src={country.flag}
-                    alt={country.name}
-                    style={{
-                      width: 20,
-                      height: 15,
-                      marginRight: 10,
-                      paddingTop: "4px",
-                    }}
-                  />
-                  {country.dialCode}
-                </Option>
+               <Option key={country.code} value={country.dialCode}>
+               <img
+                 src={country.flag}
+                 alt={country.name}
+                 style={{
+                   width: 20,
+                   height: 15,
+                   marginRight: 10,
+                   paddingTop: "4px",
+                 }}
+               />
+               {country.dialCode}
+             </Option>
               ))}
             </Select>
-            {/* Input para el número de teléfono */}
             <Input
-              type="text"
-              placeholder="Ingresa tu número de teléfono"
+              className="input-phone_complReg"
               value={formData.phone}
               onChange={handlePhoneChange}
-              style={{ width: "80%" }}
+              placeholder="Número de teléfono"
+              maxLength={15}
             />
           </div>
         </div>
