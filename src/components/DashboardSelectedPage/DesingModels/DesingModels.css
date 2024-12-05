@@ -1,5 +1,6 @@
 .design-models-container {
     display: flex;
+    align-items: center;
   }
   
   .diagram-container {
@@ -48,18 +49,14 @@
     margin-bottom: 20px;
   }
   
-  p {
-    color: #043383;
-  }
-  
   .preset-diagrams-container {
     width: 100%;
     display: flex;
     gap: 20px;
     margin-top: 5px;
-    overflow-x: auto; /* Permite desplazamiento horizontal */
+    overflow-x: auto;
     padding: 0 10px 10px 10px;
-    }
+  }
   
   .preset-diagrams-container::-webkit-scrollbar {
     height: 8px; /* Scroll horizontal */
@@ -80,24 +77,25 @@
     border-radius: 10px;
   }
   
-  .preset-item {
-    text-align: center;
-    cursor: pointer;
-    width: auto; /* No limita el ancho, mantiene el tamaño de la imagen */
-    height: auto; /* No limita la altura, mantiene el tamaño de la imagen */
-  }
-  
   .preset-item_code {
     width: 100px;
     height: 100px;
-    background-color: rgba(0, 60, 255, 0.536);
+    background-color: rgba(0, 60, 255, 0.197);
     object-fit: cover;
     border-radius: 5px;
     overflow: hidden;
   }
   
-  .preset-diagrams-box {
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
+  .delete-icon-container {
+    width: 100%;
+    position: relative;
+  }
+  
+  .delete-icon {
+position: absolute;
+right: 0;
+  }
+  
+  p {
+    color:#043383
   }

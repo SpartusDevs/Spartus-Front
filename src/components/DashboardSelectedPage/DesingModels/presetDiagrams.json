@@ -10,6 +10,54 @@
     {
       "name": "Diagrama de Proceso de Soporte",
       "code": "graph TD; A[Inicio] --> B[Cliente solicita soporte]; B --> C{¿Problema resuelto?}; C -->|Sí| D[Cerrar ticket]; C -->|No| E[Escalar problema]; D --> F[Fin]; E --> G[Asignar a soporte avanzado]; G --> F;"
-    }
+    },
+    {
+        "name": "Diagrama de Registro de Usuario",
+        "code": "graph TD; A[Inicio] --> B[Usuario ingresa datos de registro]; B --> C{¿Datos válidos?}; C -->|Sí| D[Registrar usuario en base de datos]; C -->|No| E[Mostrar mensaje de error]; D --> F[Usuario registrado exitosamente]; E --> B; F --> G[Enviar correo de confirmación]; G --> H[Fin];"
+      },
+      {
+        "name": "Diagrama de Flujo de Compra",
+        "code": "graph TD; A[Inicio] --> B[Seleccionar producto]; B --> C[Agregar al carrito]; C --> D[Proceder al pago]; D --> E{¿Pago exitoso?}; E -->|Sí| F[Confirmar compra]; E -->|No| G[Mostrar error de pago]; F --> H[Generar recibo]; G --> B; H --> I[Fin];"
+      },
+      {
+        "name": "Diagrama de Proceso de Soporte",
+        "code": "graph TD; A[Inicio] --> B[Cliente solicita soporte]; B --> C{¿Problema resuelto?}; C -->|Sí| D[Cerrar ticket]; C -->|No| E[Escalar problema]; D --> F[Fin]; E --> G[Asignar a soporte avanzado]; G --> F;"
+      },
+      {
+        "name": "Diagrama de Registro de Usuario",
+        "code": "graph TD; A[Inicio] --> B[Usuario ingresa datos de registro]; B --> C{¿Datos válidos?}; C -->|Sí| D[Registrar usuario en base de datos]; C -->|No| E[Mostrar mensaje de error]; D --> F[Usuario registrado exitosamente]; E --> B; F --> G[Enviar correo de confirmación]; G --> H[Fin];"
+      },
+      {
+        "name": "Diagrama de Flujo de Compra",
+        "code": "graph TD; A[Inicio] --> B[Seleccionar producto]; B --> C[Agregar al carrito]; C --> D[Proceder al pago]; D --> E{¿Pago exitoso?}; E -->|Sí| F[Confirmar compra]; E -->|No| G[Mostrar error de pago]; F --> H[Generar recibo]; G --> B; H --> I[Fin];"
+      },
+      {
+        "name": "Diagrama de Proceso de Soporte",
+        "code": "graph TD; A[Inicio] --> B[Cliente solicita soporte]; B --> C{¿Problema resuelto?}; C -->|Sí| D[Cerrar ticket]; C -->|No| E[Escalar problema]; D --> F[Fin]; E --> G[Asignar a soporte avanzado]; G --> F;"
+      },
+      {
+        "name": "Diagrama de Registro de Usuario",
+        "code": "graph TD; A[Inicio] --> B[Usuario ingresa datos de registro]; B --> C{¿Datos válidos?}; C -->|Sí| D[Registrar usuario en base de datos]; C -->|No| E[Mostrar mensaje de error]; D --> F[Usuario registrado exitosamente]; E --> B; F --> G[Enviar correo de confirmación]; G --> H[Fin];"
+      },
+      {
+        "name": "Diagrama de Flujo de Compra",
+        "code": "graph TD; A[Inicio] --> B[Seleccionar producto]; B --> C[Agregar al carrito]; C --> D[Proceder al pago]; D --> E{¿Pago exitoso?}; E -->|Sí| F[Confirmar compra]; E -->|No| G[Mostrar error de pago]; F --> H[Generar recibo]; G --> B; H --> I[Fin];"
+      },
+      {
+        "name": "Diagrama de Proceso de Soporte",
+        "code": "graph TD; A[Inicio] --> B[Cliente solicita soporte]; B --> C{¿Problema resuelto?}; C -->|Sí| D[Cerrar ticket]; C -->|No| E[Escalar problema]; D --> F[Fin]; E --> G[Asignar a soporte avanzado]; G --> F;"
+      },
+      {
+        "name": "Diagrama de Registro de Usuario",
+        "code": "graph TD; A[Inicio] --> B[Usuario ingresa datos de registro]; B --> C{¿Datos válidos?}; C -->|Sí| D[Registrar usuario en base de datos]; C -->|No| E[Mostrar mensaje de error]; D --> F[Usuario registrado exitosamente]; E --> B; F --> G[Enviar correo de confirmación]; G --> H[Fin];"
+      },
+      {
+        "name": "Diagrama de Flujo de Compra",
+        "code": "graph TD; A[Inicio] --> B[Seleccionar producto]; B --> C[Agregar al carrito]; C --> D[Proceder al pago]; D --> E{¿Pago exitoso?}; E -->|Sí| F[Confirmar compra]; E -->|No| G[Mostrar error de pago]; F --> H[Generar recibo]; G --> B; H --> I[Fin];"
+      },
+      {
+        "name": "Diagrama de Proceso de Soporte",
+        "code": "graph TD; A[Inicio] --> B[Cliente solicita soporte]; B --> C{¿Problema resuelto?}; C -->|Sí| D[Cerrar ticket]; C -->|No| E[Escalar problema]; D --> F[Fin]; E --> G[Asignar a soporte avanzado]; G --> F;"
+      }
   ]
   

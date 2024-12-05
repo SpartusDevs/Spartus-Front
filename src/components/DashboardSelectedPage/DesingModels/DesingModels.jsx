@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MermaidDiagram } from "@lightenna/react-mermaid-diagram";
 import { Button, message } from 'antd';
-import { SaveOutlined, DeleteOutlined } from '@ant-design/icons';
+import { SaveOutlined, DeleteOutlined, CloseOutlined } from '@ant-design/icons';  // Added CloseOutlined for the cross icon
 import './DesingModels.css';
 
 // Importar los diagramas desde el archivo JSON
@@ -38,12 +38,17 @@ const DesingModels = () => {
     message.success('¡Nuevo diagrama establecido!');
   };
 
+  const handleDeleteDiagram = (index) => {
+    // Placeholder function for deleting diagram
+    message.success(`¡Diagrama ${index + 1} eliminado!`);
+  };
+
   return (
     <>
       <h2>Diagrama Mermaid</h2>
       <div className="design-models-container">
         <div className="diagram-container">
-          <MermaidDiagram style={{color:'black'}}>
+          <MermaidDiagram style={{ color: 'black' }}>
             {diagramCode}
           </MermaidDiagram>
         </div>
@@ -81,10 +86,21 @@ const DesingModels = () => {
 
       <div className="preset-diagrams-container">
         {presetDiagrams.map((preset, index) => (
-          <div key={index} className='preset-diagrams-box'  onClick={() => handleNewDiagram(preset.code)}>
-               <MermaidDiagram style={{color:'black'}}className="preset-item_code">
-            {preset.code}
-          </MermaidDiagram>
+          <div key={index} className='preset-diagrams-box' onClick={() => handleNewDiagram(preset.code)}>
+            <div className="delete-icon-container">
+              <Button
+                type="link"
+                icon={<CloseOutlined />}
+                onClick={(e) => {
+                  e.stopPropagation();  // Prevent diagram click event from firing
+                  handleDeleteDiagram(index);  // Delete diagram
+                }}
+                className="delete-icon"
+              />
+            </div>
+            <MermaidDiagram style={{ color: 'black' }} className="preset-item_code">
+              {preset.code}
+            </MermaidDiagram>
             <h4>{preset.name}</h4>
           </div>
         ))}
