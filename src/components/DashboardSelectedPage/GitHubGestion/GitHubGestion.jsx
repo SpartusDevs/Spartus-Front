@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { sendMessageToChatGPT } from "../../../services/chatGtpApi";
 import "./GitHubGestion.css";
 
 function GitHubGestion({ repos }) {
@@ -16,13 +17,13 @@ function GitHubGestion({ repos }) {
     <div className="github-panel">
       <h1 className="github-title">Gestión de GitHub</h1>
       <div className="git-hub_flex">
-      <RepoList
-        repos={repos}
-        showAllRepos={showAllRepos}
-        handleShowAll={handleShowAll}
-        handleShowLess={handleShowLess}
-      />
-      <GitConsole/>
+        <RepoList
+          repos={repos}
+          showAllRepos={showAllRepos}
+          handleShowAll={handleShowAll}
+          handleShowLess={handleShowLess}
+        />
+        <ChatGTPConsole />
       </div>
     </div>
   );
@@ -75,44 +76,75 @@ const RepoList = ({ repos, showAllRepos, handleShowAll, handleShowLess }) => {
   );
 };
 
-const GitConsole = () => {
-  const [command, setCommand] = useState('');
-  const [output, setOutput] = useState('');
+const ChatGTPConsole = () => {
+  const [input, setInput] = useState("");
+  const [output, setOutput] = useState([]);
 
-  const handleCommandChange = (event) => {
-    setCommand(event.target.value);
+  const handleInputChange = (event) => {
+    setInput(event.target.value);
   };
 
-  const handleCommandSubmit = (event) => {
+  const handleInputSubmit = async (event) => {
     event.preventDefault();
-    // Simula ejecutar el comando, puedes hacer una llamada a un servidor para ejecutar comandos reales
-    if (command.startsWith('git')) {
-      setOutput(`Ejecutando: ${command}`);
-    } else {
-      setOutput('Comando no reconocido. Usa comandos Git.');
+    if (!input.trim()) return;
+
+    // Mostrar el mensaje del usuario en el chat
+    setOutput((prev) => [...prev, { sender: "user", content: input }]);
+
+    try {
+      // Enviar mensaje al servicio de ChatGPT
+      const response = await sendMessageToChatGPT(input);
+      setOutput((prev) => [...prev, { sender: "gpt", content: response.content }]);
+    } catch (error) {
+      setOutput((prev) => [
+        ...prev,
+        { sender: "error", content: "Hubo un problema al conectar con el servidor." },
+      ]);
     }
-    setCommand('');
+
+    setInput(""); // Limpiar el input
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '65vh', width:'100%',paddingTop:'20px' }}>
-      <div style={{height: '100%', width:'100%', background: '#2d2d2d', color: 'white', padding: '10px', fontFamily: 'Courier, monospace', flex: 1, overflowY: 'auto' }}>
-        <pre>{output}</pre>
+    <div style={{ display: "flex", flexDirection: "column", height: "65vh", width: "100%", paddingTop: "20px" }}>
+      <div
+        style={{
+          height: "100%",
+          width: "100%",
+          background: "#2d2d2d",
+          color: "white",
+          padding: "10px",
+          fontFamily: "Courier, monospace",
+          flex: 1,
+          overflowY: "auto",
+        }}
+      >
+        {output.map((msg, index) => (
+          <pre
+            key={index}
+            style={{
+              textAlign: msg.sender === "user" ? "right" : "left",
+              color: msg.sender === "error" ? "red" : "white",
+            }}
+          >
+            {msg.sender === "user" ? `> ${msg.content}` : msg.content}
+          </pre>
+        ))}
       </div>
-      <form onSubmit={handleCommandSubmit}>
+      <form onSubmit={handleInputSubmit}>
         <input
           type="text"
-          value={command}
-          onChange={handleCommandChange}
-          placeholder="Escribe tu comando Git..."
+          value={input}
+          onChange={handleInputChange}
+          placeholder="Escribe tu mensaje..."
           style={{
-            width: '100%',
-            padding: '10px',
-            backgroundColor: '#1e1e1e',
-            color: 'white',
-            border: 'none',
-            fontFamily: 'Courier, monospace',
-            fontSize: '16px',
+            width: "100%",
+            padding: "10px",
+            backgroundColor: "#1e1e1e",
+            color: "white",
+            border: "none",
+            fontFamily: "Courier, monospace",
+            fontSize: "16px",
           }}
         />
       </form>
