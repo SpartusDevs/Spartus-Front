@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import {MermaidDiagram} from "@lightenna/react-mermaid-diagram";
+import React, { useState } from 'react';
+import { MermaidDiagram } from "@lightenna/react-mermaid-diagram";
 import { Button, message } from 'antd';
-import { SaveOutlined, DeleteOutlined, FormOutlined } from '@ant-design/icons';
+import { SaveOutlined, DeleteOutlined } from '@ant-design/icons';
 import './DesingModels.css';
+
+// Importar los diagramas desde el archivo JSON
+import presetDiagrams from './presetDiagrams.json';
 
 const DesingModels = () => {
   const [diagramCode, setDiagramCode] = useState(`
@@ -17,15 +20,12 @@ const DesingModels = () => {
     G --> H[Fin];
   `);
 
-
-
   const handleCodeChange = (e) => {
     setDiagramCode(e.target.value);
   };
 
   const handleSave = () => {
     message.success('¡Código del diagrama guardado!');
-    // Aquí puedes agregar lógica para guardar el código (localStorage, servidor, etc.)
   };
 
   const handleClear = () => {
@@ -33,18 +33,8 @@ const DesingModels = () => {
     message.success('¡Área de texto borrada!');
   };
 
-  const handleNewDiagram = () => {
-    setDiagramCode(`
-    graph TD;
-    A[Inicio] --> B[Usuario ingresa datos de registro2];
-    B --> C{¿Datos válidos?};
-    C -->|Sí| D[Registrar usuario en base de datos];
-    C -->|No| E[Mostrar mensaje de error];
-    D --> F[Usuario registrado exitosamente];
-    E --> B;
-    F --> G[Enviar correo de confirmación];
-    G --> H[Fin];
-  `);
+  const handleNewDiagram = (newCode) => {
+    setDiagramCode(newCode);
     message.success('¡Nuevo diagrama establecido!');
   };
 
@@ -53,9 +43,9 @@ const DesingModels = () => {
       <h2>Diagrama Mermaid</h2>
       <div className="design-models-container">
         <div className="diagram-container">
-        <MermaidDiagram>
+          <MermaidDiagram style={{color:'black'}}>
             {diagramCode}
-            </MermaidDiagram>
+          </MermaidDiagram>
         </div>
 
         <div className="desing-textArea-container">
@@ -64,6 +54,7 @@ const DesingModels = () => {
               icon={<SaveOutlined />}
               onClick={handleSave}
               style={{ marginRight: 10 }}
+              ghost
             >
               Guardar Código
             </Button>
@@ -72,15 +63,9 @@ const DesingModels = () => {
               onClick={handleClear}
               danger
               style={{ marginRight: 10 }}
+              ghost
             >
               Borrar Área
-            </Button>
-            <Button
-              icon={<FormOutlined />}
-              onClick={handleNewDiagram}
-              style={{ marginRight: 10 }}
-            >
-              Nuevo Diagrama
             </Button>
           </div>
 
@@ -92,6 +77,17 @@ const DesingModels = () => {
             cols="50"
           />
         </div>
+      </div>
+
+      <div className="preset-diagrams-container">
+        {presetDiagrams.map((preset, index) => (
+          <div key={index} className='preset-diagrams-box'  onClick={() => handleNewDiagram(preset.code)}>
+               <MermaidDiagram style={{color:'black'}}className="preset-item_code">
+            {preset.code}
+          </MermaidDiagram>
+            <h4>{preset.name}</h4>
+          </div>
+        ))}
       </div>
     </>
   );
