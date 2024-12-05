@@ -1,6 +1,11 @@
+.big_container-desing {
+  height: 92vh;
+  overflow: hidden !important;
+}
 .design-models-container {
     display: flex;
     align-items: center;
+    overflow: hidden;
   }
   
   .diagram-container {
@@ -99,3 +104,5 @@ right: 0;
   p {
     color:#043383
   }
+
+  
