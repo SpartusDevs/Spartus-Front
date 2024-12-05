@@ -45,7 +45,7 @@ const DesingModels = () => {
 
   return (
     <div className='big_container-desing'>
-      <h2>Diagrama Mermaid</h2>
+      <h2 className='desing-title'>Diagrama Mermaid</h2>
       <div className="design-models-container">
         <div className="diagram-container">
           <MermaidDiagram style={{ color: 'black' }}>

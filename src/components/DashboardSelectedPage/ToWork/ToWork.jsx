@@ -85,7 +85,7 @@ function ToWork() {
   
   return (
 <div className="to-work">
-  <h1>Tablero de Trabajo</h1>
+  <h1 className="to-work_title">Tablero de Trabajo</h1>
   <div className="board">
     <DragDropContext onDragEnd={onDragEnd}>
       {Object.entries(columns).map(([columnId, column]) => (
