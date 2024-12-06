@@ -1,9 +1,8 @@
 import React from 'react';
-import './Team.css';
 import yo from '../../../assets/developers/yo.jpg';
 import otro2 from '../../../assets/developers/otro2.jpg';
 import otro3 from '../../../assets/developers/otro3.jpg';
-
+import './Team.css';
 
 function Team() {
   const teamMembers = [

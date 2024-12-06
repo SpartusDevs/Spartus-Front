@@ -32,7 +32,7 @@
   
   .client-form button {
     padding: 10px;
-    background-color: #0c2b3f; 
+    background-color: #007bff54;
     border: none;
     color: white;
     border-radius: 4px;
@@ -40,7 +40,7 @@
   }
   
   .client-form button:hover {
-    background-color: #1c567a;
+    background-color: #0057b31b;
   }
   
   .clients-list {
@@ -54,7 +54,7 @@
   
   .clients-list li {
     padding: 10px;
-    background-color: #1c567a;
+    background-color:#007bff54;
     margin: 10px 0;
     border-radius: 4px;
   }
