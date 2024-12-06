@@ -32,6 +32,7 @@
 .footer-section ul {
   font-size: 0.9rem;
   line-height: 1.6;
+ color: #8d8989
 }
 
 .footer-section ul {
@@ -44,7 +45,7 @@
 }
 
 .footer-section ul li a {
-  color: #ddd;
+  color: #8d8989;
   text-decoration: none;
 }
 
@@ -52,10 +53,10 @@
   color: #2d1601;
 }
 
-.social-icons a {
+.social-icons a .icon{
   margin: 0 10px;
   font-size: 1.8rem;
-  color: #ddd;
+ color: #8d8989;
   transition: color 0.3s, transform 0.3s;
 }
 

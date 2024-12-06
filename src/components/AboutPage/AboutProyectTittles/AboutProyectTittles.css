@@ -24,6 +24,7 @@
   }
   .p_about {
     font-size: 0.82rem;
+    color: #fff;
   }
   
   @keyframes gradiantstitleChange {

@@ -13,8 +13,9 @@
     animation: gradiantstitleChange 3s linear infinite;
     font-size: 2.5rem;
   }
-  .body_titles p {
+  .gradient-description {
     font-size: 0.9rem;
+    color: #fff;
   }
   @keyframes gradiantstitleChange {
     0% {

@@ -30,7 +30,7 @@ function AnimatedTitles({ language }) {
       <h1>{t.title1}</h1>
       <h1 className="h1_reconversion">{t.title2}</h1>
       <h1 className="gradient-title">{t.title3}</h1>
-      <p>{t.description}</p>
+      <p className="gradient-description">{t.description}</p>
     </div>
   );
 }
