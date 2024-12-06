@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AppstoreAddOutlined } from "@ant-design/icons";
 import { Button, Input, Form, Card, Typography } from 'antd';
+import './Projects.css'
 
 function Projects() {
   return (
