@@ -8,9 +8,14 @@
   
   .clients-title {
     font-size: 30px;
-    margin-bottom: 20px;
     text-align: center;
     color: #ffffff;
+  }
+
+  .clients-title-h2{
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
   }
   
   .client-form {

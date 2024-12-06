@@ -65,9 +65,11 @@
     font-size: 15.3px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    display: block;
+    display: flex;
     width: max-content;
     height: max-content;
+    gap:5px
+
   }
   
   .dash-tab-button:hover {

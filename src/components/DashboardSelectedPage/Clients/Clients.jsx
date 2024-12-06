@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { UsergroupAddOutlined } from "@ant-design/icons";
 import './Clients.css';
 
 // Datos de clientes (harcodeados)
@@ -30,11 +31,11 @@ function Clients() {
 
   return (
     <div className="clients-container">
-      <h1 className="clients-title">Área de Clientes</h1>
-
+      <h1 className="clients-title">Clients <UsergroupAddOutlined/></h1>
+       <h2 className="clients-title-h2">Área de Clientes</h2>
       {/* Formulario para registrar cliente */}
       <div className="client-form">
-        <h2>Registrar Nuevo Cliente</h2>
+        <h2>Registrar Nuevo Cliente </h2>
         <form onSubmit={handleAddClient}>
           <input
             type="text"

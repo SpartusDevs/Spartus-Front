@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
-import { PlusOutlined } from "@ant-design/icons";
+import { PlusOutlined, FileAddOutlined} from "@ant-design/icons";
 import "./ToWork.css";
-
 function ToWork() {
   const [columns, setColumns] = useState({
     todo: {
@@ -85,7 +84,8 @@ function ToWork() {
   
   return (
 <div className="to-work">
-  <h1 className="to-work_title">Tablero de Trabajo</h1>
+  <h1 className="to-work_title">To Work <FileAddOutlined/></h1>
+  <h2 className="to-work_title-h2">Tablero de Trabajo</h2>
   <div className="board">
     <DragDropContext onDragEnd={onDragEnd}>
       {Object.entries(columns).map(([columnId, column]) => (

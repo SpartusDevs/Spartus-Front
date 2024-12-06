@@ -1,4 +1,5 @@
 import {  useState } from "react";
+import {  GithubOutlined } from "@ant-design/icons";
 import { sendMessageToChatGPT } from "../../../services/chatGtpApi";
 import "./GitHubGestion.css";
 
@@ -15,7 +16,7 @@ function GitHubGestion({ repos }) {
 
   return (
     <div className="github-panel">
-      <h1 className="github-title">Gestión de GitHub</h1>
+      <h1 className="github-title">Gestión de GitHub <GithubOutlined/></h1>
       <div className="git-hub_flex">
         <RepoList
           repos={repos}

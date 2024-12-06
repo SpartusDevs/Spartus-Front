@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MermaidDiagram } from "@lightenna/react-mermaid-diagram";
 import { Button, message } from 'antd';
 import { SaveOutlined, DeleteOutlined, CloseOutlined } from '@ant-design/icons';  // Added CloseOutlined for the cross icon
+import { HiOutlinePaintBrush } from "react-icons/hi2";
 import './DesingModels.css';
 
 // Importar los diagramas desde el archivo JSON
@@ -45,7 +46,7 @@ const DesingModels = () => {
 
   return (
     <div className='big_container-desing'>
-      <h2 className='desing-title'>Diagrama Mermaid</h2>
+      <h2 className='desing-title'>Diagrama Mermaid<HiOutlinePaintBrush/></h2>
       <div className="design-models-container">
         <div className="diagram-container">
           <MermaidDiagram style={{ color: 'black' }}>

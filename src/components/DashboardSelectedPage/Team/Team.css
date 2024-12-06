@@ -6,8 +6,11 @@
   
   .team-title {
     font-size: 30px;
-    margin-bottom: 20px;
     color: #fff;
+  }
+  .team-title-h2{
+    font-size: 24px;
+    margin-bottom: 10px;
   }
   
   .team-grid {

@@ -1,4 +1,5 @@
 import React from "react";
+import { DollarOutlined } from "@ant-design/icons";
 import "./Finances.css";
 
 const financialData = {
@@ -13,7 +14,8 @@ const financialData = {
 function Finances() {
   return (
     <div className="finances-container">
-      <h1 className="finances-title">Área de Finanzas</h1>
+      <h1 className="finances-title">Finances <DollarOutlined/></h1>
+      <h2 className="finances-title-h2">Área de Finanzas</h2>
       <div className="finances-summary">
         <h2>Resumen Financiero</h2>
         <div className="finance-item">

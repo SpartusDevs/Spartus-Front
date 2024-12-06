@@ -7,8 +7,13 @@
   }
   
   .finances-title {
-    font-size: 2rem;
-    margin-bottom: 40px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .finances-title-h2{
+    font-size: 24px;
+    margin-bottom: 10px;
     text-align: center;
   }
   
