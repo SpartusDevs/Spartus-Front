@@ -6,7 +6,7 @@ import { UserOutlined } from "@ant-design/icons";
 import './Profile.css';
 
 function Profile() {
-  const { user, token } = useAuth();
+  const { user, token, setterUser } = useAuth();
   const [userData, setUserData] = useState({
     firstName: user?.firstName, 
     lastName: user?.lastName,
@@ -32,6 +32,7 @@ function Profile() {
           message: 'Perfil actualizado con éxito',
           description: 'Tus datos se han actualizado correctamente.',
         });
+        setterUser(response.data.user)
       } else {
         notification.error({
           message: 'Error al actualizar el perfil',
@@ -51,10 +52,12 @@ function Profile() {
   };
 
   return (
+    <div style={{position:'relative'}}>   
+    <div className='profile-titles'>
+    <h1>Profile <UserOutlined/></h1>
+    <h2>Editar Perfil</h2></div>
     <div className="profile-container">
-      <div className='profile-titles'>
-      <h1>Profile <UserOutlined/></h1>
-      <h2>Editar Perfil</h2></div>
+   
       <div className="profile-info">
         <img
           className="profile-picture"
@@ -114,7 +117,7 @@ function Profile() {
           </button>
         </form>
       </div>
-    </div>
+    </div></div>
   );
 }
 

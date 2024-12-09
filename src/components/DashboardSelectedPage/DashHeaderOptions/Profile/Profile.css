@@ -1,6 +1,5 @@
 .profile-container {
     max-width: 600px;
-    position: relative;
     margin: 0 auto;
     padding: 20px;
     border-radius: 8px;
@@ -8,7 +7,8 @@
   }
   .profile-titles{
     position: absolute;
-    left: -250px;
+    left: 40px;
+    top:40px;
   }
   .profile-titles h1{
     color: #fff;
