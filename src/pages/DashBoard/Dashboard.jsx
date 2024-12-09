@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Input, Menu, Dropdown } from "antd";
 import {
@@ -11,41 +11,76 @@ import {
   DollarOutlined,
   UsergroupAddOutlined,
   GithubOutlined,
-  PoweroffOutlined
+  PoweroffOutlined,
 } from "@ant-design/icons";
 import { HiOutlinePaintBrush } from "react-icons/hi2";
 import { useAuth } from "../../contexts/AuthContext.jsx";
 import companyImg from "../../assets/logo/smalLogo.webp";
-import { Clients, Dash, DesingModels, Finances, GitHubGestion, Projects, Settings, Team, ToWork, Profile } from "../../components/DashboardSelectedPage";
-import {fetchGitHubRepos} from "../../services/githubApi.js"
+import {
+  Clients,
+  Dash,
+  DesingModels,
+  Finances,
+  GitHubGestion,
+  Projects,
+  Settings,
+  Team,
+  ToWork,
+  Profile,
+} from "../../components/DashboardSelectedPage";
+import { fetchGitHubRepos } from "../../services/githubApi.js";
 import "./Dashboard.css";
+import { getUserByToken } from "../../services/User.js";
 
 function Dashboard() {
   const [selectedComponent, setSelectedComponent] = useState("dashboard");
   const [repos, setRepos] = useState([]);
-  const  { user } = useAuth();
+  const { user, logout, setterUser } = useAuth();
   const navigate = useNavigate();
 
-  if(!user){  
-    navigate('/login')
-
-  }
+  const isLogged = async () => {
+    if (!user) {
+      const token = localStorage.getItem("token");
+      if (!token) {
+        navigate("/login");
+      } else {
+        try {
+          const result = await getUserByToken(token);
+          setterUser(result.data);
+        } catch  {
+          navigate("/login");
+        }
+      }
+    }
+  };
 
   const handleMenuClick = (e) => {
     setSelectedComponent(e.key);
   };
+  const handleLogout = () => {
+    logout();
+    navigate("/login");
+  };
+
+  useEffect(() => {
+    isLogged();
+  }, []);
+
   useEffect(() => {
     const loadRepos = async () => {
-        const fetchedRepos = await fetchGitHubRepos();  
-        setRepos(fetchedRepos);
-       
+      const fetchedRepos = await fetchGitHubRepos();
+      setRepos(fetchedRepos);
     };
-    loadRepos(); 
-  }, []); 
+    loadRepos();
+  }, []);
 
   return (
     <div className="container-dashboard">
-      <Header setSelectedComponent={setSelectedComponent} user={user}/>
+      <Header
+        setSelectedComponent={setSelectedComponent}
+        user={user}
+        logout={handleLogout}
+      />
       <Sidebar onMenuClick={handleMenuClick} />
       <Body selectedComponent={selectedComponent} repos={repos} />
     </div>
@@ -54,13 +89,19 @@ function Dashboard() {
 
 export default Dashboard;
 
-const Header = ({setSelectedComponent, user}) => {
+const Header = ({ setSelectedComponent, user, logout }) => {
   const handleProfileClick = () => {
     setSelectedComponent("profile");
   };
   const menu = (
     <Menu onClick={(e) => handleMenuAction(e.key)}>
-      <Menu.Item key="logout" > <p className="menu_item">Salir<PoweroffOutlined className="manu_item-icon"/></p></Menu.Item>
+      <Menu.Item key="logout">
+        {" "}
+        <p className="menu_item" onClick={logout}>
+          Salir
+          <PoweroffOutlined className="manu_item-icon" />
+        </p>
+      </Menu.Item>
     </Menu>
   );
   return (
@@ -77,12 +118,12 @@ const Header = ({setSelectedComponent, user}) => {
           className="search-input"
         />
         <div className="icons-container">
-          <UserOutlined className="header-icon"  onClick={handleProfileClick} /> 
+          <UserOutlined className="header-icon" onClick={handleProfileClick} />
           <BellOutlined className="header-icon" />
-          <SettingOutlined className="header-icon nut_tool" /> 
-          <Dropdown  overlay={menu} trigger={['click']}>
+          <SettingOutlined className="header-icon nut_tool" />
+          <Dropdown overlay={menu} trigger={["click"]}>
             <img
-              src={user?.profileImg || 'https://via.placeholder.com/150'}
+              src={user?.profileImg || "https://via.placeholder.com/150"}
               alt="User"
               className="user-avatar"
             />
@@ -101,7 +142,7 @@ const Sidebar = ({ onMenuClick }) => {
         mode="inline"
         defaultSelectedKeys={["1"]}
         className="sidebar-menu"
-        onClick={onMenuClick} 
+        onClick={onMenuClick}
       >
         <Menu.Item key="dashboard" icon={<HomeOutlined />}>
           Dashboard
@@ -118,7 +159,7 @@ const Sidebar = ({ onMenuClick }) => {
         <Menu.Item key="toWork" icon={<FileAddOutlined />}>
           To Work
         </Menu.Item>
-        <Menu.Item key="clients" icon={<UsergroupAddOutlined />} >
+        <Menu.Item key="clients" icon={<UsergroupAddOutlined />}>
           Clients
         </Menu.Item>
         <Menu.Item key="finances" icon={<DollarOutlined />}>
@@ -143,7 +184,7 @@ const Body = ({ selectedComponent, repos }) => {
       case "projects":
         return <Projects />;
       case "github":
-        return <GitHubGestion repos={repos}/>;
+        return <GitHubGestion repos={repos} />;
       case "team":
         return <Team />;
       case "toWork":
@@ -155,17 +196,23 @@ const Body = ({ selectedComponent, repos }) => {
       case "designModels":
         return <DesingModels />;
       case "settings":
-        return <Settings />; 
+        return <Settings />;
       case "profile":
-       return <Profile/>;  
+        return <Profile />;
       default:
-        return <Dash />; 
-        
+        return <Dash />;
     }
   };
 
   return (
-    <div style={{ width: "100%", height: "92vh", paddingLeft: "281px", color:'white' }}>
+    <div
+      style={{
+        width: "100%",
+        height: "92vh",
+        paddingLeft: "281px",
+        color: "white",
+      }}
+    >
       {renderComponent()}
     </div>
   );
