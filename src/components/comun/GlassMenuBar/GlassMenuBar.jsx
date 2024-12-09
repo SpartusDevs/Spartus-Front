@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLanguage } from "../../../contexts/LanguageContext";
 import ButtonScrollToTop from "../ButtonToTop/ButtonToTop";
 import "./GlassMenuBar.css";
 
-function GlassMenuBar({ language }) {
+function GlassMenuBar() {
+  const { language, toggleLanguage } = useLanguage(); 
   const [showBar, setShowBar] = useState(false);
   const navigate = useNavigate();
 
@@ -20,7 +22,9 @@ function GlassMenuBar({ language }) {
       nosotros: "About Us",
     },
   };
-
+  const handleChangeLanguage = () => {
+    toggleLanguage(language === 'es' ? 'en' : 'es');
+  };
   const t = translations[language]; // Selección de idioma
 
   const handleSelect = (item) => {
@@ -62,6 +66,7 @@ function GlassMenuBar({ language }) {
           <p onClick={() => handleSelect(t.inicio)}>{t.inicio}</p>
           <p onClick={() => handleSelect(t.proyectos)}>{t.proyectos}</p>
           <p onClick={() => handleSelect(t.nosotros)}>{t.nosotros}</p>
+          <p onClick={handleChangeLanguage} className="orange">{language === 'es' ? 'ES' : 'EN'}</p>
         </div>
       )}
       {showBar && <ButtonScrollToTop />}

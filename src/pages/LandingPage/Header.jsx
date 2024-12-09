@@ -30,9 +30,10 @@ function Header({ language, toggleLanguage }) {
 
   return (
     <>
+    {/* 
       <header className="header">
         <MenuBar language={language} toggleLanguage={toggleLanguage} translations={menuBarTraslations} />
-      </header>
+      </header>*/}
       <main className="container">
         <div className="box box-1">
           <img src={updateImageLogo} className="img" />

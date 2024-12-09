@@ -1,4 +1,5 @@
 .container_intro {
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,3 +79,9 @@
 
   
 }
+
+@media (max-width:396px) {
+  .container_intro,.animated_intro-text {
+    font-size: 2.2rem !important;
+  }
+    }

@@ -32,4 +32,6 @@
   .icon:hover {
     color: #1890ff; /* Cambia el color cuando se pasa el mouse */
   }
-  
+  .orange {
+    color:orange !important;
+  }

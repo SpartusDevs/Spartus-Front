@@ -27,7 +27,7 @@ function AnimatedTitles({ language }) {
       data-aos-anchor-placement="top-bottom"
       data-aos-duration="2000"
     >
-      <h1>{t.title1}</h1>
+      <h1 className="h1_first">{t.title1}</h1>
       <h1 className="h1_reconversion">{t.title2}</h1>
       <h1 className="gradient-title">{t.title3}</h1>
       <p className="gradient-description">{t.description}</p>

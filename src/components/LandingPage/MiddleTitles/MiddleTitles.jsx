@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import "./MiddleTitles.css";
 
 function MiddleTitles({ language }) {
+  const navigate = useNavigate();
   // Traducciones
   const translations = {
     es: {
@@ -19,6 +21,10 @@ function MiddleTitles({ language }) {
     },
   };
 
+  const handleLogin = ()=>{
+    navigate("/login")
+  }
+  
   const t = translations[language];
 
   return (
@@ -32,7 +38,7 @@ function MiddleTitles({ language }) {
       <div className="container_intro-description">
         <p>{t.description1}</p>
         <p>{t.description2}</p>
-        <button className="join_button">{t.buttonText}</button>
+        <button className="join_button" onClick={handleLogin}>{t.buttonText}</button>
       </div>
     </div>
   );

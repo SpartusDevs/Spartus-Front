@@ -1,0 +1,109 @@
+@keyframes backgroundAnimation {
+    0% {
+      background: linear-gradient(135deg, #390101, #06071B, #381b1b, #0720c45d);
+    }
+    25% {
+      background: linear-gradient(75deg, #8403036d, #06071b83, #891010b9, #0720c45f);
+    }
+    50% {
+      background: linear-gradient(35deg, #3901016d, #06071B, #381b1b, #0720c4cf);
+    }
+    100% {
+      background: linear-gradient(75deg, #870202a8, #06071B, #381b1b, #0720c47c);
+    }
+  }
+  
+  .new-proyects-container {
+    animation: backgroundAnimation 5s infinite;
+    color: white;
+    height: 50vh;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Importante para los pseudoelementos */
+    overflow: hidden; /* Oculta los pseudoelementos fuera del contenedor */
+  }
+  
+  .new-proyects-container::before,
+  .new-proyects-container::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 80px; /* Ajusta la altura del difuminado */
+    left: 0;
+    z-index: 1; /* Asegura que esté detrás del contenido */
+  }
+  
+  .new-proyects-container::before {
+    top: 0;
+    background: linear-gradient(to bottom, #06071b, transparent);
+  }
+  
+  .new-proyects-container::after {
+    bottom: 0;
+    background: linear-gradient(to top, #06071b, transparent);
+  }
+  
+  .new-proyects-container h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #f6f4f3;
+    position: relative;
+    z-index: 2; /* Asegura que esté por encima del difuminado */
+  }
+  
+  .proyects-cards {
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap: 5%;
+    position: relative;
+    z-index: 2; /* Asegura que las tarjetas estén visibles */
+  }
+  
+  .proyect-card {
+    border-radius: 8px;
+    width: 185px;
+    height: calc(185px * 1.218); /* Proporción áurea */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 14px 48px rgba(114, 59, 1, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    background-color: #06071b;
+  }
+  
+  .proyect-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .proyect-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  @media (max-width:800px) {
+.proyects-cards {
+    flex-direction: column;
+    height: max-content;
+    } 
+    .new-proyects-container {
+        height: max-content;
+        background-color: none;
+        background: none;
+        transition: none;
+        animation: none;
+    }
+    .new-proyects-container h2 {
+        font-size: 2rem;
+    }
+  }
+

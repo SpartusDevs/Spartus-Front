@@ -1,6 +1,6 @@
 import { FcKindle, FcAcceptDatabase, FcGenealogy } from "react-icons/fc";
 import GlassMenuBar from "../../components/comun/GlassMenuBar/GlassMenuBar";
-import { GrayItemList, AnimatedTitles, FeatureCards, MiddleTitles, AboutUs } from "../../components/LandingPage"; 
+import { GrayItemList, AnimatedTitles, FeatureCards, MiddleTitles, AboutUs, Proyects } from "../../components/LandingPage"; 
 import translations from "./translations/Body.json";
 import "./styles/Body.css";
 
@@ -27,10 +27,12 @@ function Body({ language }) {
 
   return (
     <div className="body_container">
+      
       <AnimatedTitles language={language} />
       <FeatureCards cardsData={cardsData} />
       <GlassMenuBar data-aos="flip-up" data-aos-duration="3000" language={language} />
       <GrayItemList language={language} />
+      <Proyects language={language}  data-aos="flip-up" data-aos-duration="3000"/>
       <MiddleTitles language={language} />
       <AboutUs language={language} />
     </div>

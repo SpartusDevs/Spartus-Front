@@ -39,4 +39,8 @@
       -webkit-text-fill-color: transparent;
     }
   }
-  
+  @media (max-width:396px) {
+.h1_first,.h1_reconversion, .gradient-title {
+  font-size: 2.2rem !important;
+}
+  }

@@ -40,7 +40,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px; /* Altura de cada imagen */
+  height: 200px; /* Altura de cada imagen */
+  /*opacity: 0.2; */
 }
 
 .image-wrapper img {
