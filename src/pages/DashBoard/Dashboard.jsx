@@ -1,22 +1,21 @@
 import  { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Input, Menu } from "antd";
+import { Input, Menu, Dropdown } from "antd";
 import {
   UserOutlined,
   BellOutlined,
   SettingOutlined,
   HomeOutlined,
   AppstoreAddOutlined,
-  FileAddOutlined, // Icono para 'To Work'
+  FileAddOutlined,
   DollarOutlined,
   UsergroupAddOutlined,
-  GithubOutlined
+  GithubOutlined,
+  PoweroffOutlined
 } from "@ant-design/icons";
 import { HiOutlinePaintBrush } from "react-icons/hi2";
 import { useAuth } from "../../contexts/AuthContext.jsx";
 import companyImg from "../../assets/logo/smalLogo.webp";
-import userImg from "../../assets/developers/yo.jpg";
-import CompleteRegistrationModal from "../../components/CompleteRegistrationModal/CompleteRegistrationModal";
 import { Clients, Dash, DesingModels, Finances, GitHubGestion, Projects, Settings, Team, ToWork, Profile } from "../../components/DashboardSelectedPage";
 import {fetchGitHubRepos} from "../../services/githubApi.js"
 import "./Dashboard.css";
@@ -27,8 +26,9 @@ function Dashboard() {
   const  { user } = useAuth();
   const navigate = useNavigate();
 
-  if(!user){
-    navigate('/')
+  if(!user){  
+    navigate('/login')
+
   }
 
   const handleMenuClick = (e) => {
@@ -58,7 +58,11 @@ const Header = ({setSelectedComponent, user}) => {
   const handleProfileClick = () => {
     setSelectedComponent("profile");
   };
-
+  const menu = (
+    <Menu onClick={(e) => handleMenuAction(e.key)}>
+      <Menu.Item key="logout" > <p className="menu_item">Salir<PoweroffOutlined className="manu_item-icon"/></p></Menu.Item>
+    </Menu>
+  );
   return (
     <div className="header-dashboard">
       <div className="company-dashboard">
@@ -75,8 +79,14 @@ const Header = ({setSelectedComponent, user}) => {
         <div className="icons-container">
           <UserOutlined className="header-icon"  onClick={handleProfileClick} /> 
           <BellOutlined className="header-icon" />
-          <SettingOutlined className="header-icon" />
-          <img src={user?.profileImg || 'https://via.placeholder.com/150'} alt="User" className="user-avatar" />
+          <SettingOutlined className="header-icon nut_tool" /> 
+          <Dropdown  overlay={menu} trigger={['click']}>
+            <img
+              src={user?.profileImg || 'https://via.placeholder.com/150'}
+              alt="User"
+              className="user-avatar"
+            />
+          </Dropdown>
         </div>
       </div>
     </div>
@@ -91,7 +101,7 @@ const Sidebar = ({ onMenuClick }) => {
         mode="inline"
         defaultSelectedKeys={["1"]}
         className="sidebar-menu"
-        onClick={onMenuClick} // Establece el manejador de clic
+        onClick={onMenuClick} 
       >
         <Menu.Item key="dashboard" icon={<HomeOutlined />}>
           Dashboard

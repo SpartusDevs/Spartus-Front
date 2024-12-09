@@ -56,6 +56,8 @@
     color: #fff;
     cursor: pointer;
   }
+
+  
   
   .user-avatar {
     width: 35px;
@@ -66,9 +68,7 @@
   }
 
 
-  /*
-  barra lateral
-  */
+
 
   .sidebar {
     position: absolute;
@@ -78,4 +78,16 @@
   }
 
     
-        
+ .nut_tool {
+  transition: transform 0.5s ease;
+ }       
+ .nut_tool:hover {
+  transform: rotate(35deg);
+ }     
+
+ .menu_item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+ }
