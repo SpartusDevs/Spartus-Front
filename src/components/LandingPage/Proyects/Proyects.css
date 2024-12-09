@@ -94,6 +94,7 @@
 .proyects-cards {
     flex-direction: column;
     height: max-content;
+    gap:10px;
     } 
     .new-proyects-container {
         height: max-content;

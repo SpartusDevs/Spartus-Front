@@ -1,14 +1,17 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from "../../contexts/LanguageContext"; 
+import { useAuth } from '../../contexts/AuthContext';
 import { Checkbox, Button, Form, Input } from 'antd';
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
+import { loginUser } from '../../services/Auth'; // Importación de loginUser
 
 import './Login.css';
 
 const Login = () => {
   const navigate = useNavigate();
   const { language, toggleLanguage } = useLanguage(); 
+  const { login } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
@@ -16,11 +19,22 @@ const Login = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [showPassword, setShowPassword] = useState(false); 
+  const [error, setError] = useState(''); // Para manejar errores
 
-  const handleLoginSubmit = (e) => {
-   // e.preventDefault();
-    navigate("/dashboard");
-    console.log('Login submitted:', { email, password, rememberMe });
+  const handleLoginSubmit = async (e) => {
+    try {
+      const response = await loginUser({ email, password });
+      if (response.token) {
+        login(response);
+        navigate("/dashboard");
+      } else {
+        setError(response.message || 'Login failed');
+      }
+      
+    } catch (error) {
+      console.error("Login error:", error);
+      setError('An error occurred. Please try again.');
+    }
   };
 
   const handleRegisterSubmit = (e) => {
@@ -86,7 +100,7 @@ const Login = () => {
               {language === 'es' ? 'Contraseña' : 'Password'}
             </div>
             <Input.Password
-            className='input_password'
+              className='input_password'
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
@@ -118,6 +132,7 @@ const Login = () => {
               : language === 'es' ? 'Iniciar Sesión' : 'Login'}
           </Button>
         </Form>
+        {error && <div className="error-message">{error}</div>} {/* Muestra el error */}
         <div className="register-link">
           {!isRegistering ? (
             <p>

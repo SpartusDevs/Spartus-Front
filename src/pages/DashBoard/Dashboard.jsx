@@ -1,4 +1,5 @@
 import  { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Input, Menu } from "antd";
 import {
   UserOutlined,
@@ -12,16 +13,23 @@ import {
   GithubOutlined
 } from "@ant-design/icons";
 import { HiOutlinePaintBrush } from "react-icons/hi2";
+import { useAuth } from "../../contexts/AuthContext.jsx";
 import companyImg from "../../assets/logo/smalLogo.webp";
 import userImg from "../../assets/developers/yo.jpg";
 import CompleteRegistrationModal from "../../components/CompleteRegistrationModal/CompleteRegistrationModal";
-import { Clients, Dash, DesingModels, Finances, GitHubGestion, Projects, Settings, Team, ToWork } from "../../components/DashboardSelectedPage";
+import { Clients, Dash, DesingModels, Finances, GitHubGestion, Projects, Settings, Team, ToWork, Profile } from "../../components/DashboardSelectedPage";
 import {fetchGitHubRepos} from "../../services/githubApi.js"
 import "./Dashboard.css";
 
 function Dashboard() {
   const [selectedComponent, setSelectedComponent] = useState("dashboard");
   const [repos, setRepos] = useState([]);
+  const  { user } = useAuth();
+  const navigate = useNavigate();
+
+  if(!user){
+    navigate('/')
+  }
 
   const handleMenuClick = (e) => {
     setSelectedComponent(e.key);
@@ -37,7 +45,7 @@ function Dashboard() {
 
   return (
     <div className="container-dashboard">
-      <Header />
+      <Header setSelectedComponent={setSelectedComponent} user={user}/>
       <Sidebar onMenuClick={handleMenuClick} />
       <Body selectedComponent={selectedComponent} repos={repos} />
     </div>
@@ -46,7 +54,11 @@ function Dashboard() {
 
 export default Dashboard;
 
-const Header = () => {
+const Header = ({setSelectedComponent, user}) => {
+  const handleProfileClick = () => {
+    setSelectedComponent("profile");
+  };
+
   return (
     <div className="header-dashboard">
       <div className="company-dashboard">
@@ -61,10 +73,10 @@ const Header = () => {
           className="search-input"
         />
         <div className="icons-container">
-          <UserOutlined className="header-icon" />
+          <UserOutlined className="header-icon"  onClick={handleProfileClick} /> 
           <BellOutlined className="header-icon" />
           <SettingOutlined className="header-icon" />
-          <img src={userImg} alt="User" className="user-avatar" />
+          <img src={user?.profileImg || 'https://via.placeholder.com/150'} alt="User" className="user-avatar" />
         </div>
       </div>
     </div>
@@ -133,9 +145,12 @@ const Body = ({ selectedComponent, repos }) => {
       case "designModels":
         return <DesingModels />;
       case "settings":
-        return <Settings />;
+        return <Settings />; 
+      case "profile":
+       return <Profile/>;  
       default:
-        return <Dash />; // Por defecto, muestra el componente Dashboard
+        return <Dash />; 
+        
     }
   };
 

@@ -7,3 +7,5 @@ export { default as Projects } from "./Projects/Projects";
 export { default as Settings } from "./Settings/Settings";
 export { default as Team } from "./Team/Team";
 export { default as ToWork } from "./ToWork/ToWork";
+{/* header */}
+export {default as Profile } from './DashHeaderOptions/Profile/Profile.jsx'

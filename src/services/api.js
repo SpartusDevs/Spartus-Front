@@ -1,7 +1,28 @@
-import axios from "axios";
+import axios from 'axios';
+import * as env from '../../env.js';
+import { useAuth } from '../contexts/AuthContext';
 
 const $api = axios.create({
-  baseURL: "http://localhost:5000/api", // Base URL centralizada
+  baseURL: `${env.BACK_URL}/api`,
 });
 
-export default $api;
+const api = () => {
+  const { token } = useAuth(); 
+  const apiWithToken = axios.create({
+    baseURL: `${env.BACK_URL}/api`,
+  });
+
+  apiWithToken.interceptors.request.use(
+    (config) => {
+      if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+      }
+      return config;
+    },
+    (error) => Promise.reject(error)
+  );
+
+  return apiWithToken;
+};
+
+export { $api, api };
