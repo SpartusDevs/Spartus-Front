@@ -1,11 +1,10 @@
 import axios from "axios";
-import { GITHUB_SPARTUS_TOKEN } from "../../env.js";  
 
 export const fetchGitHubRepos = async () => {
   try {
     const response = await axios.get('https://api.github.com/user/repos', {
       headers: {
-        Authorization: `Bearer ${GITHUB_SPARTUS_TOKEN}`,
+        Authorization: `Bearer ${import.meta.env.GITHUB_SPARTUS_TOKEN}`,
       },
     });
 

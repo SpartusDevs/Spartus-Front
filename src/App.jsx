@@ -12,7 +12,7 @@ import './App.css';
 function App() {
   AOS.init();
   const [loading, setLoading] = useState(true);
-
+console.log(import.meta.env.VITE_BASE_URL)
   useEffect(() => {
     setTimeout(() => {
       setLoading(false); 
